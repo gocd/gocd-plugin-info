@@ -1,0 +1,2361 @@
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ * The order in which the files are added below is the order in which they would be added in the concatenated application.css file.
+ *
+
+
+ */
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Action Icons.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =BASE
+ * =ACTION_STATES
+ * =DISABLED_ACTION_STATES
+ */
+/**
+ * =BASE
+ */
+/* line 35, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.action_icon {
+  cursor: pointer;
+  display: block;
+  float: left;
+  height: 16px;
+  padding-left: 20px;
+  padding-top: 3px;
+}
+
+/**
+ * =ACTION_STATES
+ */
+/* line 48, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.add_icon {
+  background: url(/go/assets/g9/icons/icon_add_16.png) no-repeat left 50%;
+}
+
+/* line 51, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.remove_icon {
+  background: url(/go/assets/g9/icons/icon_remove_16.png) no-repeat left 50%;
+}
+
+/* line 54, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.delete_icon {
+  background: url(/go/assets/g9/icons/icon_delete_16.png) no-repeat left 50%;
+}
+
+/* line 57, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.edit_icon {
+  background: url(/go/assets/g9/icons/icon_edit_16.png) no-repeat left 50%;
+}
+
+/* line 60, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.preview_icon {
+  background: url(/go/assets/g9/icons/icon_preview_16.png) no-repeat left 50%;
+}
+
+/* line 63, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.preview_icon_wobg {
+  background: url(/go/assets/g9/icons/icon_preview_wobg_16.png) no-repeat left 50%;
+}
+
+/* line 66, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.move_icon {
+  background: url(/go/assets/g9/icons/icon_move_16.png) no-repeat left 50%;
+}
+
+/* line 69, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.clone_icon {
+  background: url(/go/assets/g9/icons/icon_clone_16.png) no-repeat left 50%;
+}
+
+/* line 72, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.lock_icon {
+  background: url(/go/assets/g9/icons/icon_lock_16.png) no-repeat left 50%;
+}
+
+/**
+ * =DISABLED_ACTION_STATES
+ */
+/* line 79, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.add_icon_disabled,
+.remove_icon_disabled,
+.delete_icon_disabled,
+.lock_icon_disabled,
+.edit_icon_disabled,
+.move_icon_disabled,
+.clone_icon_disabled {
+  color: #999999;
+  cursor: default;
+  display: inline-block;
+}
+
+/* line 90, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.remove_icon_disabled,
+.delete_icon_disabled {
+  background: url(/go/assets/g9/icons/icon_delete_disabled_16.png) no-repeat left 50%;
+}
+
+/* line 95, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.add_icon_disabled {
+  background: url(/go/assets/g9/icons/icon_add_disabled_16.png) no-repeat scroll left 50% transparent;
+  line-height: 16px;
+  padding-left: 20px;
+}
+
+/* line 100, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.lock_icon_disabled {
+  background: url(/go/assets/g9/icons/icon_lock_disabled_16.png) no-repeat scroll left 50% transparent;
+  padding-left: 20px;
+}
+
+/* line 106, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.remove_icon_disabled,
+.delete_icon_disabled {
+  background: url(/go/assets/g9/icons/icon_delete_disabled_16.png) no-repeat left 50%;
+}
+
+/* line 111, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.edit_icon_disabled {
+  background: url(/go/assets/g9/icons/icon_edit_16_disabled.png) no-repeat left 50%;
+}
+
+/* line 114, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.move_icon_disabled {
+  background: url(/go/assets/g9/icons/icon_move_16_disabled.png) no-repeat left 50%;
+}
+
+/* line 117, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.clone_icon_disabled {
+  background: url(/go/assets/g9/icons/icon_clone_16_disabled.png) no-repeat left 50%;
+}
+
+/**
+ * != NEEDS MIGRAGION: EXISTS B/C OF NOT USING UI HELPER
+**/
+/* line 124, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.add_link {
+  display: inline-block;
+  background: url(/go/assets/g9/icons/icon_add.png) no-repeat left 50%;
+  padding: 5px 5px 5px 20px;
+}
+
+/* line 129, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.menu_link {
+  background: url(/go/assets/g9/icons/arrow_open.png) no-repeat right 50%;
+  padding-right: 16px;
+}
+
+/* line 133, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.icon_remove {
+  display: block;
+  height: 18px;
+  width: 18px;
+  background: url(/go/assets/g9/icon_close_16.png) no-repeat 1px 3px;
+  cursor: pointer;
+}
+
+/* line 140, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/action_icons.scss */
+.icon_cannot_remove {
+  background: url(/go/assets/g9/icon_close_16_disabled.png);
+  display: block;
+  height: 18px;
+  width: 18px;
+  cursor: inherit;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Buttons.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * TODO: NEEDS MIGRATING
+ */
+/**
+ * TODO: NEEDS MIGRATING
+ */
+/* Buttons grouping */
+/* line 35, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.form_buttons {
+  padding: 8px;
+  margin-bottom: 10px;
+  background-color: #999;
+  background-repeat: repeat-x;
+  background-position: center center;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 0;
+  -moz-box-shadow: inset 0 0 4px #666;
+}
+
+/* line 48, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.form_buttons button,
+.form_buttons a.link_as_button {
+  height: 27px;
+}
+
+/* line 52, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.form_buttons button.submit:hover,
+.form_buttons button.submit_hover,
+.form_buttons a.link_as_button_hover {
+  height: 27px;
+}
+
+/* line 58, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.admin_wrapper .form_buttons {
+  margin: 10px 0 0 0;
+}
+
+/* line 63, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button,
+a.link_as_button {
+  position: relative;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  overflow: visible;
+  /* removes extra side padding in IE */
+  font-weight: normal;
+  line-height: 13px;
+  /* button defaults to 13, need to set both so they look the same/fixes height issue */
+}
+
+/* line 73, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button::-moz-focus-inner,
+a.link_as_button::-moz-focus-inner {
+  border: none;
+  /* overrides extra padding in Firefox */
+}
+
+/* line 77, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button span,
+a.link_as_button span {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* Safari and Google Chrome only - fix margins */
+  /* line 86, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+  button span,
+  a.link_as_button span {
+    margin-top: -1px;
+  }
+}
+/*shared all buttons*/
+/* line 93, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+input[type='submit'],
+input[type='submit']:hover,
+button.submit,
+button.submit:hover,
+button.submit_hover,
+button.submit.header_submit,
+button.submit.header_submit:hover,
+button.submit_hover.header_submit,
+button.ui-state-default,
+button.ui-state-default:hover,
+a.link_as_button,
+a.link_as_button:hover,
+a.link_as_button_hover,
+a.link_as_header_button,
+a.link_as_header_button:hover,
+a.link_as_header_button_hover,
+button.submit.disabled,
+button.submit.disabled:hover,
+button.submit.disabled_hover,
+button.submit.header_submit.disabled,
+button.submit.header_submit.disabled:hover,
+button.submit.header_submit.disabled_hover,
+input.submit,
+input.submit:hover,
+input.submit_hover,
+input.submit.disabled,
+input.submit.disabled:hover,
+input.submit.disabled_hover,
+a.link_as_button.disabled,
+a.link_as_button.disabled:hover,
+a.link_as_button_hover.disabled
+a.link_as_header_button.disabled,
+a.link_as_header_button.disabled:hover,
+a.link_as_header_button_hover.disabled {
+  padding: 6px 8px;
+  margin-left: 5px;
+  text-align: center;
+  background: #444 url(/go/assets/g9/backgrounds/overlay_gradient_button.png) repeat-x bottom left;
+  color: #FFF;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/* line 153, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+a.link_as_header_button,
+a.link_as_header_button:hover,
+a.link_as_header_button_hover,
+a.link_as_header_button.disabled,
+a.link_as_header_button.disabled:hover,
+a.link_as_header_button_hover.disabled {
+  float: left;
+}
+
+/* line 162, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.header_submit,
+button.submit.header_submit:hover,
+button.submit.header_submit_hover,
+a.link_as_header_button,
+a.link_as_header_button:hover,
+a.link_as_header_button_hover,
+a.link_as_header_button.disabled,
+a.link_as_header_button.disabled:hover,
+a.link_as_header_button_hover.disabled {
+  background-color: #DDD;
+  color: #000;
+}
+
+/* line 176, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+#job_actions button.submit {
+  /* styling for the jobs listing tab rerun button */
+  margin-bottom: 10px;
+}
+
+/* line 180, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+#config_save_actions button.primary {
+  padding: 2px 5px;
+  margin-right: 5px;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* line 195, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+#config_save_actions button.primary {
+  padding: 2px 5px;
+  margin-right: 5px;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* line 210, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+#config_save_actions button.primary {
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+}
+
+/* line 225, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.form_buttons button.submit {
+  min-width: 120px;
+}
+
+/* line 229, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit_small,
+button.submit_small:hover {
+  padding: 4px 6px;
+}
+
+/* line 235, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+a.link_as_button {
+  float: left;
+}
+
+/* line 242, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit,
+a.link_as_button {
+  color: #fff;
+}
+
+/* line 247, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.header_submit {
+  color: #000;
+}
+
+/* line 251, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit span,
+a.link_as_button span {
+  padding: 0;
+  color: #fff;
+  font-size: 11px;
+  height: auto;
+  background: none;
+}
+
+/* line 260, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.header_submit span {
+  padding: 0;
+  color: #000;
+  font-size: 11px;
+  height: auto;
+  padding-right: 15px;
+  background-image: url(/go/assets/g9/button_select_icon_dark.png);
+  background-position: right center;
+  background-repeat: no-repeat;
+  display: block;
+}
+
+/* line 272, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit:hover,
+button.submit_hover,
+a.link_as_button:hover,
+a.link_as_button_hover,
+a.link_as_header_button:hover,
+a.link_as_header_button_hover {
+  /* the redundant class is used to apply the hover state with a script */
+  background-color: #666;
+  color: #fff;
+  height: auto;
+}
+
+/* line 283, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.header_submit:hover,
+button.submit.header_submit_hover {
+  /* the redundant class is used to apply the hover state with a script */
+  background-color: #666;
+  color: #fff;
+  height: auto;
+}
+
+/* line 290, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit:hover span,
+button.submit_hover span,
+a.link_as_button:hover span,
+a.link_as_button_hover span {
+  padding: 0;
+  color: #fff;
+  height: auto;
+}
+
+/* line 299, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.header_submit:hover span {
+  background-image: url(/go/assets/g9/button_select_icon.png);
+  color: #FFF;
+  padding: 0 15px 0 0;
+}
+
+/* line 306, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.primary,
+a.primary_link_as_button {
+  background-color: #3399CC !important;
+}
+
+/* line 311, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.primary:hover,
+a.primary_link_as_button:hover {
+  background-color: #52b3e3 !important;
+}
+
+/* line 316, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.primary span {
+  color: #FFF !important;
+}
+
+/* line 322, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+a.reset_button {
+  float: left;
+}
+
+/* for the pause button */
+/* line 329, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.unpause_wrapper button.primary {
+  background-color: #3399cc !important;
+  height: 22px;
+}
+
+/* line 334, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.unpause_wrapper button.primary:hover {
+  background-color: #52b3e3 !important;
+}
+
+/* line 360, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.disabled,
+button.submit.disabled:hover {
+  cursor: default;
+  background-color: #CCC;
+}
+
+/* line 366, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.disabled:hover span {
+  padding: 0;
+  height: auto;
+}
+
+/* line 370, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit.disabled span,
+a.link_as_button.disabled span,
+a.link_as_button.disabled span:hover,
+a.link_as_button_hover.disabled span {
+  color: #FFF;
+  text-shadow: -1px -1px 1px #AAA;
+}
+
+/* Select Button (drop down) styles */
+/* line 379, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.submit span img,
+button.submit:hover span img,
+button.submit_hover span img {
+  position: relative;
+  top: -1px;
+  margin-left: 7px;
+  margin-right: -2px;
+}
+
+/* pipeline module buttons */
+/* line 390, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.changes_button_wrapper button.submit,
+.operate button.submit,
+.deploy button.submit {
+  background-color: #f6f6f6;
+}
+
+/* line 396, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.changes_button_wrapper button.submit span,
+.operate button.submit span,
+.deploy button.submit span {
+  color: #333;
+}
+
+/* line 402, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.changes_button_wrapper button.submit:hover,
+.operate button.submit:hover,
+.deploy button.submit:hover {
+  background-color: #666;
+}
+
+/* line 408, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.changes_button_wrapper button.submit:hover span,
+.operate button.submit:hover span,
+.deploy button.submit:hover span {
+  color: #fff;
+}
+
+/* line 414, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_with_options_wrapper button.disabled:hover {
+  background-color: #f6f6f6;
+}
+
+/* line 418, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_wrapper button.disabled:hover {
+  background-color: #f6f6f6;
+}
+
+/*Image Buttons*/
+/* line 425, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_with_options_wrapper button.image,
+.trigger_with_options_wrapper button.image:hover,
+.trigger_wrapper button.image,
+.trigger_wrapper button.image:hover,
+.pause_wrapper button.image,
+.pause_wrapper button.image:hover,
+.unpause_wrapper button.image,
+.unpause_wrapper button.image:hover {
+  padding: 0;
+}
+
+/* line 436, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_with_options_wrapper button.image span,
+.trigger_with_options_wrapper button.image:hover span,
+.trigger_wrapper button.image span,
+.trigger_wrapper button.image:hover span,
+.pause_wrapper button.image span,
+.pause_wrapper button.image:hover span,
+.unpause_wrapper button.image span,
+.unpause_wrapper button.image:hover span {
+  width: 37px;
+  height: 22px;
+}
+
+/* line 447, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_with_options_wrapper button.image span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) -74px -30px no-repeat transparent;
+}
+
+/* line 450, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_with_options_wrapper button.image:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) -74px 0 no-repeat transparent;
+}
+
+/* line 453, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_wrapper button.image span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) -37px -30px no-repeat transparent;
+}
+
+/* line 456, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_wrapper button.image:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) -37px 0 no-repeat transparent;
+}
+
+/* line 459, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.pause_wrapper button.image span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) 0 -30px no-repeat transparent;
+}
+
+/* line 462, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.pause_wrapper button.image:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) 0 0 no-repeat transparent;
+}
+
+/* line 465, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.unpause_wrapper button.image span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) 0 0 no-repeat transparent;
+}
+
+/* line 468, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.unpause_wrapper button.image:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) 0 0 no-repeat transparent;
+}
+
+/* line 471, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_with_options_wrapper button.disabled span,
+.trigger_with_options_wrapper button.disabled:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) -74px -60px no-repeat transparent;
+}
+
+/* line 475, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.trigger_wrapper button.disabled span,
+.trigger_wrapper button.disabled:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) -37px -60px no-repeat transparent;
+}
+
+/* line 479, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.pause_wrapper button.disabled span,
+.pause_wrapper button.disabled:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) 0 -60px no-repeat transparent;
+}
+
+/* line 483, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.unpause_wrapper button.disabled span,
+.unpause_wrapper button.disabled:hover span {
+  background: url(/go/assets/g9/icons/bg_sprite_pipeline_actions.png) 0 -60px no-repeat transparent;
+}
+
+/* add special stuffs when they are in the edit panel */
+/* line 490, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.edit_panel button.submit,
+.edit_panel a.link_as_button {
+  background: url(/go/assets/g9/backgrounds/overlay_gradient_button.png) repeat-x left bottom #F6F6F6;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2) inset;
+}
+
+/* line 497, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.edit_panel button.submit:hover,
+.edit_panel a.link_as_button:hover {
+  background-color: #F6F6F6;
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6) inset;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.6) inset;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.6) inset;
+}
+
+/* line 506, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+.edit_panel button span,
+.edit_panel a.link_as_button span,
+.edit_panel button:hover span,
+.edit_panel a.link_as_button:hover span,
+.edit_panel a.link_as_button_hover span {
+  color: #333;
+}
+
+/* line 515, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+#agents_form .edit_panel .download_agent {
+  float: right;
+  margin-right: 0;
+}
+
+/* line 519, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+* + html #agents_form .edit_panel .download_agent {
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+/* line 524, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+#agents_form .edit_panel .download_agent span {
+  text-transform: uppercase;
+}
+
+/* line 528, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+#agents_form .edit_panel a:hover {
+  text-decoration: none;
+}
+
+/* line 532, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+input[type='submit'] {
+  min-width: 100px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: 11px;
+  padding: 6px 8px;
+  margin: 0;
+  border: 0px none;
+  text-align: center;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 11px;
+  color: white;
+  text-transform: uppercase;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* line 551, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+input[type='submit']:hover {
+  padding: 6px 8px;
+  margin-left: 0;
+  background-color: #666666;
+}
+
+/* line 556, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+input[type='submit'].primary, .buttons-group .primary {
+  background-color: #3399CC;
+}
+
+/* line 559, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+input[type='submit'].primary:hover, .buttons-group .primary:hover {
+  background-color: #52b3e3;
+}
+
+/* line 562, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+input[type='submit'][disabled='disabled'] {
+  -moz-opacity: 0.50;
+  opacity: .50;
+  filter: alpha(opacity=50);
+  cursor: default;
+}
+
+/* line 568, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+input[type='submit'][disabled='disabled'].primary:hover {
+  background-color: #3399CC !important;
+}
+
+/* line 574, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/buttons.scss */
+button.edit-environment {
+  float: right;
+  margin-right: 5px;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Forms.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =FORM_ERRORS
+ * =REQUIRED_MESSAGING
+ * =TRISTATE_CHECKBOX
+ * =FORM_ITEM_PROPERTIES
+ * =! NEEDS TO BE MIGRATED
+**/
+/**
+ * =FORM_ERRORS
+**/
+/* line 37, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.name_value_header_row {
+  padding-bottom: 5px;
+}
+
+/* line 40, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.name_value_error_row {
+  padding-bottom: 6px;
+}
+
+/* line 43, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.name_value_cell {
+  vertical-align: top;
+  padding-bottom: 5px;
+}
+
+/* line 47, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.name_value_cell.cell_edit_reset_actions {
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* line 53, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.name_value_cell.icon_remove_cell {
+  vertical-align: middle;
+}
+
+/* line 57, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.name_value_error {
+  color: #A40000;
+  font-style: italic;
+  vertical-align: top;
+  width: 250px;
+}
+
+/* line 63, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+label.error {
+  float: left;
+  color: #a40000;
+  width: auto;
+  max-width: 370px;
+  padding-left: 8px;
+  font-style: italic;
+}
+
+/* line 71, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_error {
+  color: #A40000;
+  float: left;
+  font-style: italic;
+  max-width: 370px;
+  padding: 7px;
+  width: auto;
+}
+
+/* line 79, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+textarea.error,
+input[type="text"].error,
+.fieldWithErrors textarea,
+.fieldWithErrors textarea:focus,
+.fieldWithErrors input[type="text"],
+.fieldWithErrors select,
+.fieldWithErrors input[type="text"]:focus,
+.field_with_errors textarea,
+.field_with_errors textarea:focus,
+.field_with_errors input[type="text"],
+.field_with_errors select,
+.field_with_errors input[type="text"]:focus {
+  background-color: #F6E0E0;
+  border: 1px solid #DA7272;
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  float: left;
+}
+
+/* line 98, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldWithErrors label,
+.field_with_errors label {
+  color: #A40000;
+}
+
+/**
+ * =REQUIRED_MESSAGING
+**/
+/* line 107, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.required .asterisk {
+  color: #C00;
+}
+
+/**
+ * =TRISTATE_CHECKBOX
+**/
+/* line 115, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.tristate {
+  background-position: 0 1px;
+  background-repeat: no-repeat;
+  margin: 5px 0 3px 3px;
+  padding-left: 19px;
+  cursor: pointer;
+}
+
+/* line 122, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.hilighted .selectors {
+  background-color: #EE9;
+  border-bottom: 1px solid #000;
+}
+
+/* line 126, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.tristate_disabled_message {
+  color: #F33;
+}
+
+/* line 129, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.tristate.add {
+  background-image: url(/go/assets/tri-state-checkbox-checked.png);
+}
+
+/* line 132, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.tristate.remove {
+  background-image: url(/go/assets/tri-state-checkbox-empty.png);
+}
+
+/* line 135, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.tristate.nochange {
+  background-image: url(/go/assets/tri-state-checkbox-slash.png);
+}
+
+/**
+ * =FORM_ITEM_PROPERTIES
+**/
+/* line 144, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item.disabled input {
+  background-color: #D0D0D0;
+}
+
+/* line 148, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item.disabled label,
+.form_item.disabled h3 {
+  color: #999;
+}
+
+/**
+ * =! NEEDS TO BE MIGRATED
+**/
+/* line 157, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+label.inline {
+  display: inline;
+  margin-bottom: 0;
+  vertical-align: top;
+}
+
+/* line 163, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item {
+  margin-bottom: 10px;
+}
+
+/* line 167, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item button {
+  margin-left: 5px;
+}
+
+/* line 171, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item_block {
+  padding-bottom: 15px;
+}
+/* line 172, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item_block.with-padding-top {
+  padding-top: 15px;
+}
+
+/* line 178, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item_block:last-child {
+  padding-bottom: 0;
+}
+
+/* line 182, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.checkbox_row * {
+  vertical-align: middle;
+}
+
+/* line 186, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.checkbox_row label.inline {
+  padding-left: 5px;
+}
+
+/* line 190, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.checkbox_label_box label {
+  display: inline;
+}
+
+/* line 194, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.checkbox_label_box {
+  padding: .5em 0 .5em 0;
+}
+
+/* line 199, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldset, fieldset {
+  -moz-border-radius: 5px 5px 5px 5px;
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) inset;
+  -webkit-border-radius: 5px 5px 5px 5px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) inset;
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15) inset;
+  background-color: #EEEEEE;
+  border: 1px solid #CCCCCC;
+  clear: both;
+  margin: 0 0 0px;
+  padding: 15px 15px;
+}
+
+/* line 213, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldset.has_nested_fieldset .fieldset {
+  border: none;
+  padding: 0px;
+  -moz-border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-border-radius: 0;
+  -webkit-box-shadow: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* line 224, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.nested_form_fragment .fieldset, .nested_form_fragment fieldset {
+  border: none;
+  clear: both;
+  margin: 0 0 0px;
+  padding: 0px;
+}
+
+/* line 231, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldset {
+  clear: none;
+  margin-bottom: 15px;
+}
+
+/* line 237, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldset .form_item_block input,
+.fieldset .form_item_block select {
+  float: left;
+}
+
+/* line 242, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldset .form_item_block input[type=radio],
+.fieldset .form_item_block input[type=checkbox] {
+  float: none;
+}
+
+/* line 248, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item {
+  margin: 0;
+  padding-bottom: 20px;
+  overflow: hidden;
+}
+
+/* line 254, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldset .form_item {
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #CCC;
+  margin-bottom: 10px;
+}
+
+/* line 260, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.fieldset .form_item:last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: 0;
+}
+
+/* line 267, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.material_options.form_item_block input[type="checkbox"],
+.material_options .fieldWithErrors input.form_input,
+.material_options .field_with_errors input.form_input {
+  float: left;
+}
+
+/* line 274, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.material_options .form_error {
+  margin-top: 5px;
+}
+
+/* line 278, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.checkbox_row * {
+  vertical-align: baseline !important;
+}
+
+/* line 282, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.checkbox_row label {
+  display: inline;
+  margin: 0 10px 0 0;
+  color: #333;
+  font-weight: normal;
+}
+
+/* line 289, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.material_options label {
+  float: left;
+  margin-top: 5px;
+}
+
+/* line 294, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item_block {
+  margin-right: 10px;
+}
+
+/* line 298, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_buttons {
+  overflow: hidden;
+}
+
+/* line 302, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_buttons.actions {
+  /*    direction: rtl;*/
+}
+
+/* line 307, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+.form_item_block {
+  margin-right: 10px;
+  overflow: hidden;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+/* line 314, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+textarea.template {
+  display: none;
+}
+
+/* line 318, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+input[type="text"].searchbox {
+  background: url(/go/assets/g9/icon_search.png) transparent no-repeat right;
+  padding-right: 16px;
+}
+
+/* line 323, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+input.searchbox.ac_loading {
+  background: url(/go/assets/g9/icons/spinny_white_16.gif) transparent no-repeat right center;
+}
+
+/* line 327, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+select.large,
+textarea.large,
+input.large {
+  width: 500px;
+}
+
+/* line 332, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+input.small {
+  width: 100px;
+}
+
+/* line 335, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+input.extra_small {
+  width: 50px;
+}
+
+/* line 339, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+select.small {
+  width: 125px;
+}
+
+/* line 344, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+input.full {
+  width: 100%;
+}
+
+/* line 348, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+label.disabled {
+  color: #999;
+}
+
+/* line 354, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/forms.scss */
+input.in_between_text {
+  margin-left: -9px;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Messages.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =FLASH
+ * =NOTIFICATION
+ * =MISC
+ */
+/**
+ * =NOTIFICATION
+ */
+/* line 35, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.notification .message {
+  background-position: 10px center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  margin: 0 0 10px 0;
+  padding: 15px 15px 15px 45px;
+}
+
+/* line 44, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.notification .warning {
+  background-color: #EEE;
+  background-image: url(/go/assets/g9/icons/icon_warning_24.png);
+  background-repeat: no-repeat;
+  color: #000;
+}
+
+/* line 50, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.notification .error {
+  background-color: #EEE;
+  background-image: url(/go/assets/g9/icons/icon_error_24.png);
+  color: #000;
+}
+
+/* line 55, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.notification .info {
+  background-color: #EEE;
+  background-image: url(/go/assets/g9/icons/icon_info_24.png);
+  color: #000;
+}
+
+/**
+ * =MISC
+ */
+/* line 66, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.error_message {
+  background: url(/go/assets/g9/icons/icon_error_16.png) no-repeat;
+  display: inline-block;
+  padding: 2px 2px 2px 20px;
+  margin-left: 8px;
+}
+
+/* line 73, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.inline-message {
+  background-color: transparent;
+  background-position: 11px 4px !important;
+  border: 0 none;
+  display: inline-block;
+  margin: 0 !important;
+  padding: 5px 5px 5px 30px !important;
+  vertical-align: top;
+}
+
+/* line 83, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.information strong {
+  font-weight: bold;
+}
+
+/* line 87, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.alert {
+  background-color: #FFF1A8;
+}
+
+/* line 90, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.ok_message {
+  background: url(/go/assets/g9/icons/icon_pass_16.png) no-repeat;
+  display: inline-block;
+  padding: 2px 2px 2px 20px;
+  margin-left: 8px;
+}
+
+/*404 error html*/
+/* line 98, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.pagenotfound {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  height: 150px;
+  right: 0;
+  left: 0;
+}
+
+/* line 108, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/messages.scss */
+.biggest {
+  font-size: 80px;
+  margin-bottom: 30px;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Status Visualizations.css
+ *
+ * This file contains things like status colors (pass, fail, building, etc) and how shared ways to show these pieces 
+**/
+/**
+ * TABLE OF CONTENTS
+ *
+ * =STATUS_TREATMENTS
+ * ==TABLE_OVERRIDES
+ * =COLOR_CODE
+**/
+/**
+ * =STATUS_TREATMENTS
+**/
+/* line 37, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.Passed {
+  background-image: url(/go/assets/g9/backgrounds/bg_status_gradient.png);
+  background-repeat: repeat-x;
+  background-color: #78C42D;
+  background-position: bottom left;
+}
+
+/* line 44, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.Failed {
+  background-image: url(/go/assets/g9/backgrounds/bg_status_gradient.png);
+  background-repeat: repeat-x;
+  background-color: #FA2D2D;
+  background-position: bottom left;
+}
+
+/* line 51, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.Failing {
+  background-image: url(/go/assets/g9/backgrounds/bg_status_diagonal.png);
+  background-repeat: repeat-x;
+  background-color: #FA2D2D;
+  background-position: bottom left;
+}
+
+/* line 57, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.Unknown {
+  background: url(/go/assets/g9/backgrounds/bg_state_unknown.png) no-repeat right;
+}
+
+/* line 61, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.Building,
+.Active {
+  background-image: url(/go/assets/g9/backgrounds/bg_status_diagonal.png);
+  background-repeat: repeat-x;
+  background-color: #FFC11B;
+  background-position: bottom left;
+}
+
+/* line 69, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.Cancelled {
+  background-image: url(/go/assets/g9/backgrounds/bg_status_diagonal.png);
+  background-repeat: repeat-x;
+  background-color: #FFC11B;
+  background-position: bottom left;
+  text-align: center;
+}
+
+/**
+ * ==TABLE OVERRIDES
+**/
+/* line 81, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+tr.Cancelled td {
+  text-align: left;
+}
+
+/**
+ * =COLOR_CODE
+ */
+/* line 89, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.color_code {
+  width: 1em;
+  height: 1em;
+  margin-right: .5em;
+  float: left;
+  overflow: hidden;
+}
+
+/* line 96, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.color_code_small {
+  float: left;
+  height: 12px;
+  width: 12px;
+  margin-right: 5px;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+/* line 104, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+* + html .color_code_small {
+  width: 1em;
+  height: 1em;
+}
+
+/* line 108, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+* + html .color_code_small img {
+  position: relative;
+  top: -2px;
+  left: 0;
+}
+
+/* line 113, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/status_visualizations.scss */
+.color_code_stage {
+  width: 36px;
+  height: 12px;
+  margin-right: 5px;
+  float: left;
+  overflow: visible;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Tables.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =LIST_TABLE
+ * =SORTABLE_TABLE
+ * =SELECTABLE_TABLE
+ * != NEEDS MIGRATING
+ */
+/**
+ * =LIST_TABLE
+**/
+/* line 36, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.list_table {
+  background: #FFF;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #bbb;
+  -moz-box-shadow: 0 0 5px #BBB;
+  -webkit-box-shadow: 0 0 5px #BBB;
+  font-size: 11px;
+  width: 100%;
+}
+
+/* line 45, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.list_table th,
+.list_table td {
+  padding: 8px 10px;
+}
+
+/* line 49, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.list_table th {
+  background: #EEE url(/go/assets/g9/backgrounds/overlay_gradient_th.png) repeat-x;
+  border-bottom: 1px solid #DDD;
+  white-space: nowrap;
+}
+
+/* line 54, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.list_table th a {
+  color: #333;
+}
+
+/* line 57, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.list_table td {
+  border-bottom: 1px dotted #DDD;
+}
+
+/* line 60, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.list_table .Disabled {
+  color: #999;
+  font-style: italic;
+}
+
+/**
+ * =SORTABLE TABLE
+**/
+/* line 69, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.sortable_table th a.sorted_asc span {
+  background-image: url(/go/assets/g9/icons/icon_sorted_up.png);
+}
+
+/* line 72, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.sortable_table th a.sorted_desc span {
+  background-image: url(/go/assets/g9/icons/icon_sorted_down.png);
+}
+
+/* line 75, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.sortable_table th a span {
+  background-image: url(/go/assets/g9/icons/icon_sort_sortable.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  display: inline-block;
+  padding-right: 15px;
+}
+
+/* line 82, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.sortable_table th a span:hover {
+  background-image: url(/go/assets/g9/icons/icon_sort_sortable_hover.png);
+}
+
+/**
+ * =SELECTABLE_TABLE
+**/
+/* line 90, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+.selectable_table td.selector {
+  padding: 0;
+  text-align: center;
+}
+
+/**
+ * != NEEDS MIGRATING
+**/
+/* line 100, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tables.scss */
+th.remove, th.actions {
+  text-align: left;
+  min-width: 110px;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/** 
+ * Tabs.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =SUB_TABS
+ */
+/**
+ * =SUB_TABS
+**/
+/* line 32, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tabs_container {
+  background: #999 url(/go/assets/g9/backgrounds/overlay_bottom_inside_shadow.png) bottom repeat-x;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  -moz-border-radius-topleft: 6px;
+  -moz-border-radius-topright: 6px;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-top-right-radius: 6px;
+  border: 0;
+  clear: left;
+  display: block;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 10px;
+  overflow-y: hidden;
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+/* line 51, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tabs_container ul {
+  float: none;
+}
+
+/* line 54, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tabs_container li {
+  display: block;
+  float: left;
+  margin-right: 5px;
+  padding: 0;
+}
+
+/* line 60, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tabs_container li a {
+  background-color: #333;
+  border: 0;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  color: #FFF;
+  display: block;
+  font-size: 11px;
+  padding: 7px 12px;
+}
+
+/* line 74, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tabs_container li a:hover {
+  background-color: #555;
+  color: #FFF;
+}
+
+/* line 78, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tabs_container .current_tab {
+  background: none;
+  bottom: 0;
+  position: relative;
+}
+
+/* line 83, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tabs_container li.current_tab a,
+.sub_tabs_container li.current_tab a:hover,
+.sub_tabs_container li.current a,
+.sub_tabs_container li.current a:hover {
+  background-color: #FFF;
+  color: #000;
+  font-weight: normal;
+}
+
+/* line 91, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tabs.scss */
+.sub_tab_container {
+  clear: both;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Titles.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =ENTITY_TITLES
+ * =! MISC NEEDS MIGRATION
+ */
+/**
+ * =ENTITY_TITLES
+**/
+/* line 34, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+h2.entity_title {
+  background-repeat: no-repeat;
+  border-bottom: 1px dotted #ccc;
+  color: #3f2559;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding: 0 0 10px 0;
+}
+
+/* line 42, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.pipelines h2.entity_title {
+  font-size: 20px;
+}
+
+/* line 46, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.environment h2.entity_title, .pipeline_group h2.entity_title {
+  background-position: -12px -10px;
+  line-height: 30px;
+  padding-left: 35px;
+}
+
+/* line 52, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.environment h2.entity_title, .pipeline_group h2.entity_title {
+  background-image: url(/go/assets/g9/icons/icon_environments_24.png);
+}
+
+/* line 55, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.pipeline_group h2.entity_title {
+  background-image: url(/go/assets/g9/icons/icon_pipelinegroup_24.png);
+}
+
+/* line 58, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.template_group h2.entity_title {
+  background-image: url(/go/assets/g9/icons/icon_pipeline_template_24.png);
+  background-position: -12px -10px;
+  padding-left: 35px;
+}
+
+/* line 63, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+h3.entity_title {
+  background-repeat: no-repeat;
+  padding: 5px 0 10px 30px;
+  margin: 0;
+}
+
+/* line 68, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.pipeline_header h3.entity_title {
+  background-image: url(/go/assets/g9/icons/icon_pipeline_24.png);
+  background-position: -12px -10px;
+}
+
+/* line 73, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.pipeline_header .toggle-new-view, .agents-toggle-new-view {
+  display: inline-block;
+  margin-left: 10px;
+  background: #86569a;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* line 80, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.pipeline_header .toggle-new-view:hover, .agents-toggle-new-view:hover {
+  color: #fff;
+}
+
+/**
+ * =! MISC NEEDS MIGRATION
+**/
+/* line 88, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+h2.legend {
+  margin-bottom: 5px;
+}
+
+/* line 92, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+h2.inline {
+  display: inline;
+  padding-bottom: 5px;
+}
+
+/* if there are new materials */
+/* line 98, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/titles.scss */
+.pipeline_bundle .pipeline_header h3.has_new_materials {
+  background-image: url(/go/assets/g9/icons/icon_pipeline_24_info.png);
+  background-position: -12px -12px;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Tooltips.css
+ *
+ * overrides to plugin tiptip CSS - Version 1.2
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =CONTEXTUAL_HELP
+ * =TIPTIP
+ * ==WEBKIT HACKS
+ * ==FORM_WIRING
+ * TODO: FROM MODULE.CSS
+ * =TRUNCATED_TOOLTIP
+ */
+/**
+ * =CONTEXTUAL_HELP
+ * NOTE: this is a helper class that should be put on the div calling the tooltip
+**/
+/* line 41, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+div.contextual_help {
+  background: url(/go/assets/g9/icons/icon_help_16_inactive.png) no-repeat center center;
+  display: block;
+  float: left;
+  height: 22px;
+  margin: 3px;
+  width: 22px;
+}
+
+/* line 49, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+.contextual_help:hover {
+  background: url(/go/assets/g9/icons/icon_help_16.png) no-repeat center center;
+}
+
+/* line 52, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+span.contextual_help {
+  background: url(/go/assets/g9/icons/icon_help_16_inactive.png) no-repeat center center;
+  line-height: 22px;
+  padding-bottom: 5px;
+  padding-right: 22px;
+  padding-top: 12px;
+}
+
+/* line 59, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+.checkbox_row div.contextual_help {
+  display: inline-block;
+  float: none;
+  margin-top: 0px;
+  margin-left: -7px;
+}
+
+/**
+ * =TIPTIP
+ */
+/* line 70, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+}
+
+/* line 77, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_top {
+  padding-bottom: 5px;
+}
+
+/* line 80, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_bottom {
+  padding-top: 5px;
+}
+
+/* line 83, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_right {
+  padding-left: 5px;
+}
+
+/* line 86, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_left {
+  padding-right: 5px;
+}
+
+/* line 89, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_content {
+  background-color: #191919;
+  background-color: rgba(25, 25, 25, 0.92);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(transparent), to(#000));
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 3px #555;
+  -webkit-box-shadow: 0 0 3px #555;
+  -moz-box-shadow: 0 0 3px #555;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px 12px;
+  text-shadow: 0 0 2px #000;
+}
+
+/* line 105, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_arrow, #tiptip_arrow_inner {
+  position: absolute;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 6px;
+  height: 0;
+  width: 0;
+}
+
+/* line 113, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_top #tiptip_arrow {
+  border-top-color: #FFF;
+  border-top-color: rgba(255, 255, 255, 0.35);
+}
+
+/* line 117, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_bottom #tiptip_arrow {
+  border-bottom-color: #FFF;
+  border-bottom-color: rgba(255, 255, 255, 0.35);
+}
+
+/* line 121, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_right #tiptip_arrow {
+  border-right-color: #FFF;
+  border-right-color: rgba(255, 255, 255, 0.35);
+}
+
+/* line 125, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_left #tiptip_arrow {
+  border-left-color: #FFF;
+  border-left-color: rgba(255, 255, 255, 0.35);
+}
+
+/* line 129, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+  border-top-color: #191919;
+  border-top-color: rgba(25, 25, 25, 0.92);
+  margin-left: -6px;
+  margin-top: -7px;
+}
+
+/* line 135, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+  border-bottom-color: #191919;
+  border-bottom-color: rgba(25, 25, 25, 0.92);
+  margin-left: -6px;
+  margin-top: -5px;
+}
+
+/* line 141, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+  border-right-color: #191919;
+  border-right-color: rgba(25, 25, 25, 0.92);
+  margin-left: -5px;
+  margin-top: -6px;
+}
+
+/* line 147, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+  border-left-color: #191919;
+  border-left-color: rgba(25, 25, 25, 0.92);
+  margin-left: -7px;
+  margin-top: -6px;
+}
+
+/**
+ * ==FORM_WIRING
+ */
+/* line 158, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+.before_tip {
+  float: left;
+}
+
+/**
+ * ==WEBKIT HACKS
+ */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  /* line 166, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+  #tiptip_content {
+    background-color: rgba(45, 45, 45, 0.88);
+    padding: 4px 8px 5px 8px;
+  }
+
+  /* line 170, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+  #tiptip_holder.tip_bottom #tiptip_arrow_inner {
+    border-bottom-color: rgba(45, 45, 45, 0.88);
+  }
+
+  /* line 173, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+  #tiptip_holder.tip_top #tiptip_arrow_inner {
+    border-top-color: rgba(20, 20, 20, 0.92);
+  }
+}
+/** 
+ * TODO: FROM MODULE.CSS
+ */
+/* line 182, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+div.has_go_tip {
+  /*background: transparent image_url('g9/icons/icon_help_16.png') repeat scroll 0 0;*/
+  /*height: 16px;*/
+  /*position: absolute;*/
+  /*right: 0;*/
+  /*top: -25px;*/
+  /*width: 16px;*/
+}
+
+/* line 194, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+.has_go_tip,
+.has_go_tip_right,
+.has_go_tip_left {
+  cursor: help;
+}
+
+/* line 200, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder {
+  display: none;
+  left: 0;
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+}
+
+/* line 208, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_top {
+  padding-bottom: 5px;
+}
+
+/* line 212, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_bottom {
+  padding-top: 5px;
+}
+
+/* line 216, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_right {
+  padding-left: 5px;
+}
+
+/* line 220, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_left {
+  padding-right: 5px;
+}
+
+/* line 224, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_content {
+  background-color: #333;
+  max-width: 300px;
+  color: #FFF;
+  font-size: 11px;
+  padding: 7px 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* line 235, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_arrow, #tiptip_arrow_inner {
+  border: 6px solid transparent;
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+/* line 242, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_top #tiptip_arrow {
+  border-top-color: #333333;
+}
+
+/* line 246, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_bottom #tiptip_arrow {
+  border-bottom-color: #333333;
+}
+
+/* line 250, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_right #tiptip_arrow {
+  border-right-color: #333333;
+}
+
+/* line 254, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_left #tiptip_arrow {
+  border-left-color: #333333;
+}
+
+/* line 258, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_top #tiptip_arrow_inner {
+  border-top-color: #333333;
+  margin-left: -6px;
+  margin-top: -7px;
+}
+
+/* line 264, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+  border-bottom-color: #333333;
+  margin-left: -6px;
+  margin-top: -5px;
+}
+
+/* line 270, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_right #tiptip_arrow_inner {
+  border-right-color: #333333;
+  margin-left: -5px;
+  margin-top: -6px;
+}
+
+/* line 276, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_holder.tip_left #tiptip_arrow_inner {
+  border-left-color: #333333;
+  margin-left: -7px;
+  margin-top: -6px;
+}
+
+/* line 282, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+#tiptip_content {
+  padding: 10px 15px;
+}
+
+/**
+ * =TRUNCATED_TOOLTIP
+**/
+/* line 296, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+.pattern_truncated_tooltip {
+  padding: 5px;
+}
+
+/* line 299, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+.pattern_truncated_tooltip #tiptip_arrow {
+  display: none;
+}
+
+/* line 302, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/tooltips.scss */
+.pattern_truncated_tooltip #tiptip_content {
+  padding: 5px;
+  background: #FFF;
+  color: #333;
+  border: 1px solid #AAA;
+  text-shadow: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+/*************************GO-LICENSE-START*********************************
+ * Copyright 2014 ThoughtWorks, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *************************GO-LICENSE-END***********************************/
+/**
+ * Wizard Steps.css
+ */
+/**
+ * TABLE OF CONTENTS
+ *
+ * =! NEEDS MIGRATING
+ */
+/**
+ * =! NEEDS MIGRATING
+ */
+/* line 33, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper .tabs a,
+.steps_wrapper .tabs a.current {
+  -moz-border-radius: 0;
+  -moz-box-shadow: none;
+  margin-right: 36px;
+  margin-top: 3px;
+  margin-left: 24px;
+  padding: 7px 24px 12px 0;
+  font-size: 12px;
+  color: #000;
+  text-align: left;
+}
+
+/* line 46, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper .tabs a {
+  background: none;
+}
+
+/* line 50, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper .tabs a:hover {
+  background-color: transparent;
+}
+
+/* line 54, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper .tabs .disabled a:hover {
+  background-color: transparent;
+  color: #000;
+  cursor: default;
+}
+
+/* line 60, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper .tabs li.current_tab a {
+  color: #FFF;
+  background: url(/go/assets/g9/step_current.png) bottom left transparent no-repeat;
+}
+
+/* line 65, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper .tabs a div {
+  font-weight: bold;
+}
+
+/* line 69, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper {
+  display: block;
+  background: #666 url(/go/assets/g9/backgrounds/bg_gradient_50.png) repeat-x center left !important;
+  -moz-border-radius: 6px;
+  padding: 0;
+}
+
+/* line 76, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper li {
+  display: inline;
+  margin-right: 5px;
+}
+
+/* line 82, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper li.view_label,
+.steps_wrapper li a {
+  font-size: 11px;
+  text-decoration: none;
+  display: block;
+  padding: 5px;
+}
+
+/* line 90, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper li.view_label {
+  color: #FFF;
+}
+
+/* line 94, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper li a {
+  padding: 5px 12px;
+  background: #000 url(/go/assets/g9/backgrounds/overlay_gradient_30px.png) repeat-x;
+  color: #FFF;
+  -moz-border-radius: 4px;
+  margin-top: 6px;
+}
+
+/* line 103, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper li a:hover {
+  background-color: #222;
+}
+
+/* line 107, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_panes {
+  clear: both;
+}
+
+/* line 111, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_panes .form_content {
+  font-size: 12px;
+}
+
+/* line 116, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_panes .form_content .step_title {
+  font-size: 16px;
+}
+
+/* line 120, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_panes .form_content .step_instruction {
+  font-size: 14px;
+}
+
+/* line 124, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.step_answer_choice {
+  float: left;
+  margin: 6px 24px 6px 0;
+}
+
+/* line 129, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_wrapper a.link_as_button span {
+  font-size: 12px;
+  padding: 1px 0;
+}
+
+/* line 134, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.wizard_form .form_buttons {
+  border-radius: 0 0 6px 6px;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  text-align: right;
+  direction: ltr;
+}
+
+/* line 141, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_panes .form_buttons {
+  text-align: right;
+  direction: rtl;
+}
+
+/**
+ * Agent form section
+**/
+/* line 150, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+#tab-content-of-env-agents .form_content {
+  padding: 0;
+  height: 380px;
+  /* override the height from padding on normal form_content   */
+}
+
+/* line 155, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+#tab-content-of-env-agents .form_content table {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+/**
+ * Pipelines form section
+**/
+/**
+ * Wizard form section 
+**/
+/* line 168, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.wizard_form .form_content {
+  padding: 15px;
+  height: 350px;
+  overflow: auto;
+  border: 1px solid #CCC;
+}
+
+/* line 176, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+.steps_panes .step_number {
+  display: none;
+}
+
+/**
+ * =SINGLE_ERROR_PAGE
+ */
+/* line 185, /Volumes/Data/Projects/go/gocd/server/webapp/WEB-INF/rails.new/app/assets/stylesheets/patterns/wizard_steps.scss */
+body.page_error .steps_panes .step_number {
+  display: inline;
+}

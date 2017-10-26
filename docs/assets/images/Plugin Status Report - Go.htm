@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)http://localhost:8153/go/admin/status_reports/cd.go.contrib.elastic-agent.docker-swarm -->
+<html class="no-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Plugin Status Report - Go</title>
+  <title>
+    Plugin Status Report - Go
+</title>
+
+<link href="./Plugin Status Report - Go_files/application.css" media="all" rel="stylesheet">
+<link href="./Plugin Status Report - Go_files/application(1).css" media="all" rel="stylesheet">
+<link href="./Plugin Status Report - Go_files/new-theme.css" media="all" rel="stylesheet">
+
+<script src="./Plugin Status Report - Go_files/application.js"></script><style type="text/css">
+:root #header + #content > #left > #rlblock_left
+{ display: none !important; }</style><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak{display:none !important;}ng\:form{display:block;}</style>
+<!--[if !IE]-->
+    <script src="./Plugin Status Report - Go_files/d3-3.1.5.min.js"></script>
+<!--[endif]-->
+<!--[if gt IE 8]><!-->
+    <script src="./Plugin Status Report - Go_files/d3-3.1.5.min.js"></script>
+<!--<![endif]-->
+
+
+<link rel="shortcut icon" href="http://localhost:8153/go/assets/cruise.ico">
+  <meta content="authenticity_token" name="csrf-param">
+<meta content="l0JoF2E96gm9BZsG0ID+0LkeSNbuaDPrSK1hkc8Y0nw=" name="csrf-token">
+</head>
+
+<body data-controller-name="status_reports" data-action-name="show" id="status_reports-page" class="ng-scope">
+<div class="page-wrap">
+  <div id="header">
+    <div class="row">
+  <div class="header clear_float">
+    <a href="http://localhost:8153/go/pipelines" id="application_logo">&nbsp;</a>
+    <div class="application_nav">
+  <input id="server_timestamp" name="server_time" type="hidden" value="1505972380">        <ul class="user">
+          <li class="help">
+            <a href="https://gocd.org/help" target="_blank">Need Help?</a>
+          </li>
+            <li class="current_user icon">
+                <a href="http://localhost:8153/go/admin/status_reports/cd.go.contrib.elastic-agent.docker-swarm#" class="current_user_name dropdown-arrow-icon">admin</a>
+                <ul class="enhanced_dropdown hidden">
+                    <li>
+                        <a href="http://localhost:8153/go/preferences/notifications">Preferences</a>
+                    </li>
+                    <li class="logout">
+                        <a class="sign_out" href="http://localhost:8153/go/auth/logout" id="nav-logout">Sign out</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+
+    <ul class="tabs">
+        <li id="cruise-header-tab-pipelines" class="">
+            <a href="http://localhost:8153/go/pipelines">PIPELINES</a>        </li>
+        <li id="cruise-header-tab-environments" class="">
+            <a href="http://localhost:8153/go/environments">ENVIRONMENTS</a>        </li>
+        <li id="cruise-header-tab-agents" class="">
+            <a href="http://localhost:8153/go/agents">AGENTS</a>        </li>
+        <li id="cruise-header-tab-admin" class="">
+                <a class="dropdown-arrow-icon" data-toggle="dropdown" href="http://localhost:8153/go/admin/status_reports/cd.go.contrib.elastic-agent.docker-swarm#">ADMIN</a>                <ul class="dropdown-menu" role="menu">
+                        <li role="presentation">
+    <a href="http://localhost:8153/go/admin/pipelines">Pipelines</a></li>
+<li role="presentation">
+  <a href="http://localhost:8153/go/admin/templates">Templates</a></li>
+<li role="presentation">
+  <a href="http://localhost:8153/go/admin/elastic_profiles">Elastic Agent Profiles</a></li>
+<li role="presentation">
+    <a href="http://localhost:8153/go/admin/config_xml">Config XML</a></li>
+<li role="presentation">
+    <a href="http://localhost:8153/go/admin/config/server">Server Configuration</a></li>
+<li role="presentation">
+    <a href="http://localhost:8153/go/admin/users">User Summary</a></li>
+<li role="presentation">
+    <a href="http://localhost:8153/go/oauth/admin/clients">OAuth Clients</a></li>
+<li role="presentation">
+    <a href="http://localhost:8153/go/admin/backup">Backup</a></li>
+<li role="presentation">
+  <a href="http://localhost:8153/go/admin/plugins">Plugins</a></li>
+<li role="presentation">
+    <a href="http://localhost:8153/go/admin/package_repositories/new">Package Repositories</a></li>
+<li role="presentation" class="sub-menu">
+  <a href="http://localhost:8153/go/admin/status_reports/cd.go.contrib.elastic-agent.docker-swarm#">Security</a>
+  <ul class="dropdown menu" data-dropdown-menu="">
+    <li role="presentation">
+      <a href="http://localhost:8153/go/admin/security/auth_configs">Authorization Configuration</a>    </li>
+    <li role="presentation">
+      <a href="http://localhost:8153/go/admin/security/roles">Role Configuration</a>    </li>
+  </ul>
+</li>
+                </ul>
+        </li>
+    </ul>
+    <div class="error_messaging_counter">
+  <div id="cruise_message_counts" class="cruise_messages">    <a onclick="Modalbox.show($(&#39;cruise_message_body&#39;), {title: &#39;Error and warning messages&#39;, overlayClose:false})">
+        <span class="messages">
+                    <span class="error_count">Errors: 1</span>
+        </span>
+    </a>
+</div>
+  <div id="cruise_message_body" style="display:none;" class="cruise_message_body">      <div class="error" data-pipelines="[]">
+        <div class="message">Command Repository [Sep-21 10:27:02]</div>
+        <div class="description">Unable to upgrade command repository located at /Volumes/Data/Projects/go/gocd/server/db/command_repository/default. Message: in is null</div>
+      </div>
+</div>
+
+     <script type="text/javascript">
+        Util.on_load(function() {
+          new AjaxRefresher('/go/server/messages.json', null, {
+            executeImmediately: true,
+            afterRefresh: function(){
+              jQuery(document).trigger("server-health-messages-refresh-completed");
+            }
+          });
+        });
+     </script>
+</div>
+
+</div>
+<div id="back_to_top" class="back_to_top" title="Scroll to Top">Top</div>
+
+  </div>
+</div>
+  </div>
+
+  <main class="main-container"><div id="status_reports">
+  <style>
+    [data-plugin-style-id="docker-swarm-plugin"] .cluster {
+        padding: 20px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node {
+        border:        1px solid #d1c4e9;
+        width:         100%;
+        background:    #fff;
+        border-radius: 2px;
+        margin-bottom: 20px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-header {
+        background:  #d1c4e9;
+        padding:     10px;
+        font-size:   14px;
+        font-weight: 600;
+        cursor:      pointer;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-header .left {
+        float:   left;
+        padding: 0px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-header .right {
+        float: right;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-header div:first-child {
+        padding-left: 0px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-header span {
+        display:   inline-block;
+        width:     15%;
+        font-size: 17px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-content {
+        padding: 10px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table {
+        width:     calc(100% - 40px);
+        min-width: 95%;
+        border:    1px solid #D8D8D8;
+        font-size: 13px;
+        margin:    10px 20px 20px 20px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table thead {
+        background: #D8D8D8;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table thead th {
+        padding:     10px 20px;
+        font-weight: bold;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table tbody tr {
+        border-top:      1px solid #D8D8D8;
+        border-bottom:   1px solid #D8D8D8;
+        border-collapse: collapse;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table tbody td {
+        padding:       10px 20px;
+        max-width:     190px;
+        text-overflow: ellipsis;
+        overflow:      hidden;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table tbody td.state {
+        width: 50px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table tbody td.task-created {
+        width: 160px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node table tbody td.service-id {
+        width: 260px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .message {
+        font-size:   13px;
+        font-weight: 600;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dl.properties {
+        overflow:       hidden;
+        margin:         0;
+        font-size:      13px;
+        display:        inline-block;
+        vertical-align: top;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dt {
+        float:       left;
+        clear:       both;
+        min-width:   150px;
+        text-align:  right;
+        font-weight: normal;
+        padding:     5px 0px;
+        margin:      0;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dl.properties.inline dt {
+        clear:          none;
+        min-width:      auto;
+        vertical-align: bottom;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dl.properties.inline dd, [data-plugin-style-id="docker-swarm-plugin"] dl.properties.inline dt {
+        padding: 0px;
+        height:  15px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dl.properties.inline dd {
+        margin-right: 10px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-header .hostname, [data-plugin-style-id="docker-swarm-plugin"] .node-header .node-id {
+        min-width:     14em;
+        max-width:     14em;
+        overflow:      hidden;
+        text-overflow: ellipsis;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dl.properties.inline dt:first-child {
+        min-width:   auto;
+        margin-left: 10px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dt:after {
+        content: ":";
+        padding: 0px 5px 0px 2px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] dd {
+        float:       left;
+        padding:     5px 0px;
+        font-weight: 600;
+        margin:      0;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node .header {
+        margin: 20px 0px 0px 20px;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .node-header .accordian-icon {
+        width: 0px;
+        float: right;
+    }
+
+    [data-plugin-style-id="docker-swarm-plugin"] .warning {
+        font-size:     13px;
+        font-weight:   600;
+        margin-bottom: 10px;
+        border-left:   2px solid #f7bc08;
+        padding:       10px;
+        background:    #fff;
+        border-radius: 2px;
+    }
+</style>
+
+<div data-plugin-style-id="docker-swarm-plugin">
+    <div class="cluster">
+                <div class="node">
+                <div class="node-header row" ng-click="node0 = !node0" ngmodel="node0" ng-value="false" ng-init="node0 = true" value="false">
+                    <div class="columns medium-10 left">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <dl class="properties inline">
+                            <dt>Hostname</dt>
+                            <dd class="hostname">moby</dd>
+                            <dt>Node Id</dt>
+                            <dd class="node-id">655xwqsf5dhzdnqsge9dj6vhu</dd>
+                            <dt>Role</dt>
+                            <dd class="role">Manager</dd>
+                            <dt>Status</dt>
+                            <dd class="status">Ready</dd>
+                            <dt>Availability</dt>
+                            <dd class="availability">Active</dd>
+                                <dt>Manager Status</dt>
+                                <dd class="leader">Leader</dd>
+                        </dl>
+                    </div>
+                    <div class="right">
+                        <dl class="properties inline" style="margin-right: 10px">
+                            <dt>Task count</dt>
+                            <dd>0</dd>
+                        </dl>
+                        <i class="fa fa-chevron-down" aria-hidden="true" ng-show="node0"></i>
+                        <i class="fa fa-chevron-right" aria-hidden="true" ng-hide="node0" style="display: none;"></i>
+                    </div>
+                </div>
+                <div class="node-content" ng-show="node0">
+                    <div>
+                        <dl class="properties">
+                            <dt>CPU</dt>
+                            <dd>4</dd>
+                            <dt>Memory</dt>
+                            <dd>1.95 GB</dd>
+                        </dl>
+
+                        <dl class="properties">
+                            <dt>OS</dt>
+                            <dd>linux</dd>
+                            <dt>Architecture</dt>
+                            <dd>x86_64</dd>
+                        </dl>
+
+                        <dl class="properties">
+                            <dt>IP Address</dt>
+                            <dd>10.131.20.115</dd>
+                            <dt>Docker version</dt>
+                            <dd>17.09.0-ce-rc1</dd>
+                        </dl>
+                    </div>
+                    <h4 class="header">Running tasks</h4>
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Image</th>
+                            <th>State</th>
+                            <th>Created At</th>
+                            <th>Service Id</th>
+                        </tr></thead>
+                        
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="message">No running tasks.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+    </div>
+</div>
+
+</div></main>
+
+</div>
+<div id="footer-new-foundation">
+  <footer class="app-footer">
+    <div class="row expanded">
+        <div class="small-12 medium-6 large-8 columns">
+            <p class="copyright">Copyright © 2017
+                <a href="https://www.thoughtworks.com/products" target="_blank">ThoughtWorks, Inc.</a>
+                Licensed under <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.<br>
+                Go includes <a href="http://localhost:8153/go/NOTICE/cruise_notice_file.pdf" target="_blank">third-party software</a>.
+                Go Version: 17.11.0 (5427-f3a7558d92be2f75d36838e14dbd3a98ecfea26d).
+            </p>
+
+        </div>
+      <div class="small-12 medium-6 large-4 columns">
+            <span class="inline-list social">
+                <a href="https://twitter.com/goforcd" title="twitter" class="twitter" target="_blank"></a>
+                <a href="https://github.com/gocd/gocd" title="github" class="github" target="_blank"></a>
+                <a href="https://groups.google.com/d/forum/go-cd" title="forums" class="forums" target="_blank"></a>
+                <a href="https://docs.gocd.org/17.11.0" title="documentation" class="documentation" target="_blank"></a>
+                <a href="https://www.gocd.org/plugins/" title="plugins" class="plugins" target="_blank"></a>
+                <a href="https://api.gocd.org/17.11.0" title="api" class="api" target="_blank"></a>
+                <a href="http://localhost:8153/go/about" title="about" class="server-details" target="_blank"></a>
+                <a href="http://localhost:8153/go/cctray.xml" title="cctray" class="cctray" target="_blank"></a>
+            </span>
+      </div>
+  </div>
+</footer>
+
+
+</div>
+<script type="application/javascript">
+  jQuery(".main-container").html('<div id=\"status_reports\">\n  <style>\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .cluster {\n        padding: 20px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node {\n        border:        1px solid #d1c4e9;\n        width:         100%;\n        background:    #fff;\n        border-radius: 2px;\n        margin-bottom: 20px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header {\n        background:  #d1c4e9;\n        padding:     10px;\n        font-size:   14px;\n        font-weight: 600;\n        cursor:      pointer;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header .left {\n        float:   left;\n        padding: 0px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header .right {\n        float: right;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header div:first-child {\n        padding-left: 0px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header span {\n        display:   inline-block;\n        width:     15%;\n        font-size: 17px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-content {\n        padding: 10px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table {\n        width:     calc(100% - 40px);\n        min-width: 95%;\n        border:    1px solid #D8D8D8;\n        font-size: 13px;\n        margin:    10px 20px 20px 20px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table thead {\n        background: #D8D8D8;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table thead th {\n        padding:     10px 20px;\n        font-weight: bold;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table tbody tr {\n        border-top:      1px solid #D8D8D8;\n        border-bottom:   1px solid #D8D8D8;\n        border-collapse: collapse;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table tbody td {\n        padding:       10px 20px;\n        max-width:     190px;\n        text-overflow: ellipsis;\n        overflow:      hidden;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table tbody td.state {\n        width: 50px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table tbody td.task-created {\n        width: 160px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node table tbody td.service-id {\n        width: 260px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .message {\n        font-size:   13px;\n        font-weight: 600;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dl.properties {\n        overflow:       hidden;\n        margin:         0;\n        font-size:      13px;\n        display:        inline-block;\n        vertical-align: top;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dt {\n        float:       left;\n        clear:       both;\n        min-width:   150px;\n        text-align:  right;\n        font-weight: normal;\n        padding:     5px 0px;\n        margin:      0;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dl.properties.inline dt {\n        clear:          none;\n        min-width:      auto;\n        vertical-align: bottom;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dl.properties.inline dd, [data-plugin-style-id=\"docker-swarm-plugin\"] dl.properties.inline dt {\n        padding: 0px;\n        height:  15px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dl.properties.inline dd {\n        margin-right: 10px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header .hostname, [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header .node-id {\n        min-width:     14em;\n        max-width:     14em;\n        overflow:      hidden;\n        text-overflow: ellipsis;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dl.properties.inline dt:first-child {\n        min-width:   auto;\n        margin-left: 10px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dt:after {\n        content: \":\";\n        padding: 0px 5px 0px 2px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] dd {\n        float:       left;\n        padding:     5px 0px;\n        font-weight: 600;\n        margin:      0;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node .header {\n        margin: 20px 0px 0px 20px;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .node-header .accordian-icon {\n        width: 0px;\n        float: right;\n    }\n\n    [data-plugin-style-id=\"docker-swarm-plugin\"] .warning {\n        font-size:     13px;\n        font-weight:   600;\n        margin-bottom: 10px;\n        border-left:   2px solid #f7bc08;\n        padding:       10px;\n        background:    #fff;\n        border-radius: 2px;\n    }\n<\/style>\n\n<div data-plugin-style-id=\"docker-swarm-plugin\">\n    <div class=\"cluster\">\n                <div class=\"node\">\n                <div class=\"node-header row\" ng-click=\"node0 = !node0\" ngModel=\"node0\"\n                     ng-value=\"false\" ng-init=\"node0 = true\">\n                    <div class=\"columns medium-10 left\">\n                        <i class=\"fa fa-desktop\" aria-hidden=\"true\"><\/i>\n                        <dl class=\"properties inline\">\n                            <dt>Hostname<\/dt>\n                            <dd class=\"hostname\">moby<\/dd>\n                            <dt>Node Id<\/dt>\n                            <dd class=\"node-id\">655xwqsf5dhzdnqsge9dj6vhu<\/dd>\n                            <dt>Role<\/dt>\n                            <dd class=\"role\">Manager<\/dd>\n                            <dt>Status<\/dt>\n                            <dd class=\"status\">Ready<\/dd>\n                            <dt>Availability<\/dt>\n                            <dd class=\"availability\">Active<\/dd>\n                                <dt>Manager Status<\/dt>\n                                <dd class=\"leader\">Leader<\/dd>\n                        <\/dl>\n                    <\/div>\n                    <div class=\"right\">\n                        <dl class=\"properties inline\" style=\"margin-right: 10px\">\n                            <dt>Task count<\/dt>\n                            <dd>0<\/dd>\n                        <\/dl>\n                        <i class=\"fa fa-chevron-down\" aria-hidden=\"true\" ng-show=\"node0\"><\/i>\n                        <i class=\"fa fa-chevron-right\" aria-hidden=\"true\" ng-hide=\"node0\"><\/i>\n                    <\/div>\n                <\/div>\n                <div class=\"node-content\" ng-show=\"node0\">\n                    <div>\n                        <dl class=\"properties\">\n                            <dt>CPU<\/dt>\n                            <dd>4<\/dd>\n                            <dt>Memory<\/dt>\n                            <dd>1.95 GB<\/dd>\n                        <\/dl>\n\n                        <dl class=\"properties\">\n                            <dt>OS<\/dt>\n                            <dd>linux<\/dd>\n                            <dt>Architecture<\/dt>\n                            <dd>x86_64<\/dd>\n                        <\/dl>\n\n                        <dl class=\"properties\">\n                            <dt>IP Address<\/dt>\n                            <dd>10.131.20.115<\/dd>\n                            <dt>Docker version<\/dt>\n                            <dd>17.09.0-ce-rc1<\/dd>\n                        <\/dl>\n                    <\/div>\n                    <h4 class=\"header\">Running tasks<\/h4>\n                    <table>\n                        <thead>\n                        <tr>\n                            <th>Id<\/th>\n                            <th>Image<\/th>\n                            <th>State<\/th>\n                            <th>Created At<\/th>\n                            <th>Service Id<\/th>\n                        <\/thead>\n                        <\/tr>\n                        <tbody>\n                            <tr>\n                                <td colspan=\"5\" class=\"message\">No running tasks.<\/td>\n                            <\/tr>\n                        <\/tbody>\n                    <\/table>\n                <\/div>\n            <\/div>\n    <\/div>\n<\/div>\n\n<\/div>');
+  angular.bootstrap('#status_reports-page');
+</script>
+
+<div id="tiptip_holder" style="max-width:auto;"><div id="tiptip_arrow"><div id="tiptip_arrow_inner"></div></div><div id="tiptip_content"></div></div></body></html>

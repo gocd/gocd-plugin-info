@@ -1,0 +1,6 @@
+{% for plugin in site.data.plugins %}
+    {% assign url = '/' | append: plugin.dir | append: '/' | append: plugin.currentVersion | append: '/' %}
+    {% if url == page.url %}
+        {% assign currentPlugin = plugin %}
+    {% endif %}
+{% endfor %}
