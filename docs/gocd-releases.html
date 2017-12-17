@@ -1,0 +1,150 @@
+---
+layout: default
+permalink: /gocd-releases
+---
+
+<style type="text/css">
+    .container-fluid {
+        padding: 0px !important;
+    }
+
+    .win-icon {
+        background:      url("{{ 'assets/images/dld-win.svg' | relative_url }}") no-repeat 5px 7px;
+        background-size: 24px;
+        padding-left:    35px;
+    }
+
+    .osx-icon {
+        background:      url("{{ 'assets/images/dld-osx.svg' | relative_url }}") no-repeat 5px 7px;
+        background-size: 24px;
+        padding-left:    35px;
+    }
+
+    .rpm-icon {
+        background:      url("{{ 'assets/images/dld-rpm.svg' | relative_url }}") no-repeat 5px 7px;
+        background-size: 24px;
+        padding-left:    35px;
+    }
+
+    .deb-icon {
+        background:      url("{{ 'assets/images/dld-deb.svg' | relative_url }}") no-repeat 5px 7px;
+        background-size: 24px;
+        padding-left:    35px;
+    }
+
+    .zip-icon {
+        background:      url("{{ 'assets/images/dld-zip.svg' | relative_url }}") no-repeat 5px 2px;
+        background-size: 24px;
+        padding-left:    35px;
+    }
+
+    .tab-content {
+        background: #fff;
+    }
+
+    .tab-pane {
+        padding:    10px;
+        height:     calc(100vh - 140px);
+        overflow-y: auto;
+    }
+</style>
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        let releasesJSON = sort(JSON.parse('{{ site.data.releases | jsonify }}'));
+
+        renderReleasesFor(releasesJSON, "deb", $('#debian'));
+        renderReleasesFor(releasesJSON, "rpm", $('#rpm'));
+        renderReleasesFor(releasesJSON, "osx", $('#osx'));
+        renderReleasesFor(releasesJSON, "win", $('#windows'));
+        renderReleasesFor(releasesJSON, "generic", $('#zip'));
+    });
+
+    function renderReleasesFor(releasesJSON, packageType, container) {
+        const table = $('<table class="table table-bordered">');
+        table.appendTo(container);
+        const headerRow = $('<tr>');
+        $('<thead>').append(headerRow).appendTo(table);
+        $.each(["Version", "Build Number", "Server", "Agent", "Released At"], function (index, text) {
+            $('<th scope="col">').text(text).appendTo(headerRow)
+        });
+
+        const tbody = $('<tbody>');
+        table.append(tbody);
+
+        for (let release of releasesJSON) {
+            const row = $('<tr>');
+            row.appendTo(tbody);
+            const packageInfo = release[packageType];
+            $('<td>').text(release.go_version).appendTo(row);
+            $('<td>').text(release.go_build_number).appendTo(row);
+
+            if (packageInfo && packageInfo.server) {
+                $('<td>').html(downloadUrl(release.go_full_version, packageInfo.server.file)).appendTo(row);
+            } else {
+                $('<td>').text('-').appendTo(row);
+            }
+
+            if (packageInfo && packageInfo.agent) {
+                $('<td>').html(downloadUrl(release.go_full_version, packageInfo.agent.file)).appendTo(row);
+            } else {
+                $('<td>').text('-').appendTo(row);
+            }
+
+            $('<td>').text(dateString(release.release_time)).appendTo(row);
+        }
+    }
+
+    function dateString(releaseTime) {
+        return releaseTime ? new Date(releaseTime * 1000).toLocaleDateString("en-US", {
+            weekday: 'short',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        }) : ''
+    }
+
+    function downloadUrl(fullVersion, filename) {
+        return $(`<a href="https://download.gocd.org/binaries/${fullVersion}/${filename}">`).text(filename.split("/")[1]);
+    }
+
+
+    function sort(releasesJSON) {
+        const withVersionindex = releasesJSON.map(function (release) {
+            let parts = release.go_version.split(".");
+            release['versionIndex'] = parts[0] * 1000 + parts[1] * 10 + parts[2];
+            return release;
+        });
+
+        return withVersionindex.sort(function (a, b) {
+            return b.versionIndex - a.versionIndex;
+        });
+    }
+</script>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link win-icon active" data-toggle="tab" href="#windows" role="tab">Windows</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link osx-icon" data-toggle="tab" href="#osx" role="tab">OSX</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link deb-icon" data-toggle="tab" href="#debian" role="tab">Debian/APT</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link rpm-icon" data-toggle="tab" href="#rpm" role="tab">RPM/YUM</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link zip-icon" data-toggle="tab" href="#zip" role="tab">Zip</a>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="windows" role="tabpanel"></div>
+    <div class="tab-pane" id="osx" role="tabpanel"></div>
+    <div class="tab-pane" id="debian" role="tabpanel"></div>
+    <div class="tab-pane" id="rpm" role="tabpanel"></div>
+    <div class="tab-pane" id="zip" role="tabpanel"></div>
+</div>

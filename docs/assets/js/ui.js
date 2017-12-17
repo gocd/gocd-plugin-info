@@ -1,4 +1,4 @@
-const UI = function (ignoreList) {
+const UI = function () {
     const ui = this;
     const githubClient = new GitHubClient();
 
@@ -40,7 +40,7 @@ const UI = function (ignoreList) {
         const tbody = $('<tbody>');
         table.append(tbody);
         if (releases.length == 0) {
-            ui.errorCard("No release", `No release available for plugin <code>${plugin.full_name}</code>`).appendTo('.release-listing');
+            $(`<p class="text-danger">No release available for the plugin.</p>`).appendTo('.release-listing');
             return;
         }
         $.each(releases, function (index, release) {
@@ -74,7 +74,7 @@ const UI = function (ignoreList) {
     };
 
     ui.authorInformation = function (author) {
-        const anchor = $(`<a href="${author.url}" style="text-decoration:none">`);
+        const anchor = $(`<a href="https://github.com/${author.login}" style="text-decoration:none">`);
         anchor.append(`<img src="${author.avatar_url}" width="20" height="20" class="rounded" alt="${author.login}"/>`);
         anchor.append('&nbsp;&nbsp;');
         anchor.append(author.login);
@@ -85,29 +85,6 @@ const UI = function (ignoreList) {
         return $('<a class="download-button text-info">')
             .text('Download')
             .attr('href', downloadUrl)
-    };
-
-    ui.errorCard = function (header, message, cardClass) {
-        const card = $('<div class="cd cd-error text-danger">');
-        if (cardClass) {
-            card.addClass(cardClass)
-        }
-
-        $('<div class="cd-title">').text(header).appendTo(card);
-        $('<p class="cd-content">').html(message).appendTo(card);
-
-        return card;
-    };
-
-    ui.isInIgnoreList = function (plugin) {
-        if (ignoreList) {
-            for (let i = 0; i < ignoreList.length; i++) {
-                if (new RegExp(ignoreList[i]).test(plugin.name)) {
-                    return true;
-                }
-            }
-        }
-        return false;
     };
 
     ui.readableSize = function (bytes) {

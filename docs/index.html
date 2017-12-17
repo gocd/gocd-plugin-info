@@ -1,11 +1,11 @@
 ---
 layout: default
+permalink: /home
 ---
 
 <script type="application/javascript">
     $(document).ready(function () {
-        const ignoreList = JSON.parse('{{ site.data.repos.ignore_list | jsonify }}');
-        const ui = new UI(ignoreList);
+        const ui = new UI();
         registeredPlugins(ui.renderRegisteredPlugins);
     });
 
