@@ -2,31 +2,53 @@ const GitHubClient = function () {
     const client = this;
 
     client.listReleases = function (plugin, callback) {
-        $.ajax({
-            url: `api/${plugin.repository_name}/index.json`,
-            success: function (result) {
-                release_from_github(plugin, result, callback);
-            }
+        ajax(`api/${plugin.repository_name}/index.json`, {}, function (result, status, xhr) {
+            release_from_github(plugin, result, callback);
         });
     };
 
     release_from_github = function (plugin, original_result, callback) {
         if (original_result.etag) {
-            $.ajax({
-                url: `https://api.github.com/repos/${plugin.repository_name}/releases`,
-                beforeSend: function (request) {
-                    request.setRequestHeader("If-None-Match", original_result.etag);
-                },
-                success: function (result, status, xhr) {
+            ajax(`https://api.github.com/repos/${plugin.repository_name}/releases`,
+                {"If-None-Match": original_result.etag}, function (result, status, xhr) {
                     if (xhr.status === 200) {
                         callback(result);
                     } else {
                         callback(original_result.releases)
                     }
-                }
-            });
+                });
         } else {
             callback(original_result.releases);
+        }
+    };
+
+    ajax = function (url, headers, callback) {
+        $.ajax({
+            url: url,
+            headers: headers,
+            beforeSend: function (request) {
+                addSpinner();
+            },
+            success: function (result, status, xhr) {
+                removeSpinner();
+                callback(result, status, xhr);
+            },
+            error: function (xhr, status, errorThrown) {
+                removeSpinner();
+                callback(null, status, xhr);
+            }
+        });
+    };
+
+    addSpinner = function () {
+        $('.release-listing').append('<div class="loader"/>');
+    };
+
+    removeSpinner = function () {
+        try {
+            $(".loader").remove();
+        } catch (e) {
+            console.log(e);
         }
     };
 

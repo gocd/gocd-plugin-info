@@ -36,22 +36,27 @@ Jekyll::Hooks.register :site, :post_write do |site|
 end
 
 def download_yaml_file fromURL
-  yaml_data = YAML::load(open(fromURL))
-  return yaml_data
+  YAML::load(open(fromURL))
 end
 
 def download_release_information(plugins_store)
   FileUtils.mkdir_p("api/")
   threads = []
   plugins_store.each do |category|
+    plugins_to_delete = []
     category[:plugins].each do |plugin|
       if github_url(plugin['releases_url'])
         repo_url = github_repo_url(plugin['releases_url'])
         plugin['repository_name'] = repo_url
         threads << Thread.new {get_releases(repo_url)}
       else
-        puts "Not a github release url #{plugin['releases_url']}"
+        puts "Unable to find valid release url for #{plugin['name']}"
+        plugins_to_delete << plugin
       end
+    end
+
+    plugins_to_delete.each do |plugin|
+      category[:plugins].delete(plugin)
     end
   end
 
