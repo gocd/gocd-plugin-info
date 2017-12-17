@@ -2,21 +2,60 @@ const UI = function (ignoreList) {
     const ui = this;
     const githubClient = new GitHubClient();
 
-    ui.renderPluginList = function (orgs) {
-        githubClient.listRepos(orgs, function (plugins) {
-            $.each(plugins, function (index, plugin) {
-                if (!ui.isInIgnoreList(plugin)) {
+    ui.renderRegisteredPlugins = function (registeredPlugins) {
+        $.each(registeredPlugins, function (index, category) {
+            var categoryLi = $('<li class="list-group-item category-header">').text(category.type);
+            categoryLi.appendTo(".plugin-listing");
+            $.each(category.plugins, function (index, plugin) {
+                if (plugin.releases_url && !plugin.paid) {
                     var pluginLi = $('<li class="list-group-item">').text(plugin.name);
                     pluginLi.appendTo(".plugin-listing");
-                    ui.onPluginClick(pluginLi, plugin);
+                    ui.onPluginClick(pluginLi, plugin)
                 }
             })
-        });
+        })
     };
 
     ui.onPluginClick = function (elem, plugin) {
         elem.click(function () {
-            ui.renderReleases(plugin);
+            ui.renderReleasesTableView(plugin)
+            // ui.renderReleases(plugin);
+        });
+    };
+
+    ui.renderReleasesTableView = function (plugin) {
+        $('.release-listing').html("");
+        githubClient.listReleases(plugin, function (releases) {
+            if (releases.length == 0) {
+                ui.errorCard("No release", `No release available for plugin <code>${plugin.full_name}</code>`).appendTo('.release-listing');
+                return;
+            }
+            $.each(releases, function (index, release) {
+                const releaseDiv = $('<div class="plugin-release cd list-view">');
+                if (release.name) {
+                    $('<span class="name">').text(release.name).appendTo(releaseDiv);
+                } else {
+                    $('<span class="name text-muted">').text("unnamed-release").appendTo(releaseDiv);
+                }
+
+                releaseDiv.append(ui.createTag(release.tag_name));
+                releaseDiv.append(ui.keyValueGroup("Size", ui.readableSize(release.assets[0].size), "btn-primary"));
+                releaseDiv.append(ui.keyValueGroup("Downloads", release.assets[0].download_count, "btn-success"));
+
+                const publishedDate = new Date(release.published_at);
+                releaseDiv.append(ui.keyValueGroup("Published At", publishedDate.toLocaleDateString("en-US", {
+                    weekday: 'short',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                })));
+
+                const footer = $('<div class="cd-ft">');
+                ui.downloadButton(release.assets[0].browser_download_url).appendTo(footer);
+                footer.appendTo(releaseDiv);
+
+                releaseDiv.appendTo('.release-listing');
+            });
         });
     };
 

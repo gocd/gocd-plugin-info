@@ -1,0 +1,54 @@
+[
+  {
+    "name": "auth_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/auth_plugins.yml"
+  },
+  {
+    "name": "authorization_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/authorization_plugins.yml"
+  },
+  {
+    "name": "config_repo_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/config_repo_plugins.yml"
+  },
+  {
+    "name": "elastic_agent_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/elastic_agent_plugins.yml"
+  },
+  {
+    "name": "events.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/events.yml"
+  },
+  {
+    "name": "notification_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/notification_plugins.yml"
+  },
+  {
+    "name": "paid_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/paid_plugins.yml"
+  },
+  {
+    "name": "repo_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/repo_plugins.yml"
+  },
+  {
+    "name": "scm_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/scm_plugins.yml"
+  },
+  {
+    "name": "tag_page_header_info.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/tag_page_header_info.yml"
+  },
+  {
+    "name": "task_plugins.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/task_plugins.yml"
+  },
+  {
+    "name": "webinars.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/webinars.yml"
+  },
+  {
+    "name": "workshops_presentations.yml",
+    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/workshops_presentations.yml"
+  }
+]

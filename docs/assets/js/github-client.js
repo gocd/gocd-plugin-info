@@ -1,22 +1,33 @@
 const GitHubClient = function () {
     const client = this;
 
-    client.listRepos = function (organization, callback) {
+    client.listReleases = function (plugin, callback) {
         $.ajax({
-            url: client.format("https://api.github.com/orgs/{0}/repos", [organization]),
+            url: `api/${plugin.repository_name}/index.json`,
             success: function (result) {
-                callback(result);
+                release_from_github(plugin, result, callback);
             }
         });
     };
 
-    client.listReleases = function (plugin, callback) {
-        $.ajax({
-            url: plugin.releases_url.replace("{/id}", ""),
-            success: function (result) {
-                callback(result);
-            }
-        });
+    release_from_github = function (plugin, original_result, callback) {
+        if (original_result.etag) {
+            $.ajax({
+                url: `https://api.github.com/repos/${plugin.repository_name}/releases`,
+                beforeSend: function (request) {
+                    request.setRequestHeader("If-None-Match", original_result.etag);
+                },
+                success: function (result, status, xhr) {
+                    if (xhr.status === 200) {
+                        callback(result);
+                    } else {
+                        callback(original_result.releases)
+                    }
+                }
+            });
+        } else {
+            callback(original_result.releases);
+        }
     };
 
     client.format = function (source, params) {
