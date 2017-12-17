@@ -18,6 +18,10 @@ const UI = function (ignoreList) {
 
     ui.onPluginClick = function (elem, plugin) {
         elem.click(function () {
+            $(".plugin-name").text(plugin.name);
+            $(".list-group-item").removeClass("selected");
+            elem.addClass("selected");
+
             githubClient.listReleases(plugin, function (releases) {
                 ui.renderReleasesTableView(plugin, releases);
             });
@@ -49,8 +53,8 @@ const UI = function (ignoreList) {
             }
 
             $('<td>').html(`<span class="badge badge-success">${release.tag_name}</span>`).appendTo(row);
-            $('<td>').text(ui.readableSize(release.assets[0].size)).appendTo(row);
-            $('<td>').text(release.assets[0].download_count).appendTo(row);
+            $('<td>').text(release.assets[0] ? ui.readableSize(release.assets[0].size) : '').appendTo(row);
+            $('<td>').text(release.assets[0] ? release.assets[0].download_count : '').appendTo(row);
             $('<td>').text(new Date(release.published_at).toLocaleDateString("en-US", {
                 weekday: 'short',
                 year: 'numeric',
@@ -59,7 +63,11 @@ const UI = function (ignoreList) {
             })).appendTo(row);
 
             $('<td>').append(ui.authorInformation(release.author)).appendTo(row);
-            $('<td>').append(ui.downloadButton(release.assets[0].browser_download_url)).appendTo(row);
+            if (release.assets[0]) {
+                $('<td>').append(ui.downloadButton(release.assets[0].browser_download_url)).appendTo(row);
+            } else {
+                $('<td>').appendTo(row);
+            }
 
             table.appendTo('.release-listing');
         });
