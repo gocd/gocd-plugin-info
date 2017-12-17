@@ -41,7 +41,8 @@ const GitHubClient = function () {
     };
 
     addSpinner = function () {
-        $('.release-listing').append('<div class="loader"/>');
+        $('.release-listing').html('')
+        $('.release-listing').prepend('<div class="loader"/>');
     };
 
     removeSpinner = function () {
