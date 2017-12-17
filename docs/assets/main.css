@@ -2,7 +2,7 @@
 
 body {
     font-family: Roboto, sans-serif;
-    background:  #e2e1e0;
+    background:  #F6F6F6;
 }
 
 .navbar {
@@ -63,8 +63,8 @@ body {
 }
 
 .release-listing {
-    max-height: calc(100vh - 4rem);
-    padding:    0px;
+    max-height: calc(100vh - 5rem);
+    padding:    10px;
     overflow-y: auto;
 }
 
@@ -192,4 +192,10 @@ body {
     padding:    5px;
     background: #2D3045;
     color:      #fff;
+}
+
+table {
+    margin-bottom: 35px;
+    background:    #fff;
+    font-size:     13px;
 }

@@ -18,102 +18,65 @@ const UI = function (ignoreList) {
 
     ui.onPluginClick = function (elem, plugin) {
         elem.click(function () {
-            ui.renderReleasesTableView(plugin)
-            // ui.renderReleases(plugin);
-        });
-    };
-
-    ui.renderReleasesTableView = function (plugin) {
-        $('.release-listing').html("");
-        githubClient.listReleases(plugin, function (releases) {
-            if (releases.length == 0) {
-                ui.errorCard("No release", `No release available for plugin <code>${plugin.full_name}</code>`).appendTo('.release-listing');
-                return;
-            }
-            $.each(releases, function (index, release) {
-                const releaseDiv = $('<div class="plugin-release cd list-view">');
-                if (release.name) {
-                    $('<span class="name">').text(release.name).appendTo(releaseDiv);
-                } else {
-                    $('<span class="name text-muted">').text("unnamed-release").appendTo(releaseDiv);
-                }
-
-                releaseDiv.append(ui.createTag(release.tag_name));
-                releaseDiv.append(ui.keyValueGroup("Size", ui.readableSize(release.assets[0].size), "btn-primary"));
-                releaseDiv.append(ui.keyValueGroup("Downloads", release.assets[0].download_count, "btn-success"));
-
-                const publishedDate = new Date(release.published_at);
-                releaseDiv.append(ui.keyValueGroup("Published At", publishedDate.toLocaleDateString("en-US", {
-                    weekday: 'short',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                })));
-
-                const footer = $('<div class="cd-ft">');
-                ui.downloadButton(release.assets[0].browser_download_url).appendTo(footer);
-                footer.appendTo(releaseDiv);
-
-                releaseDiv.appendTo('.release-listing');
+            githubClient.listReleases(plugin, function (releases) {
+                ui.renderReleasesTableView(plugin, releases);
             });
         });
     };
 
-    ui.renderReleases = function (plugin) {
+    ui.renderReleasesTableView = function (plugin, releases) {
         $('.release-listing').html("");
-        githubClient.listReleases(plugin, function (releases) {
-            if (releases.length == 0) {
-                ui.errorCard("No release", `No release available for plugin <code>${plugin.full_name}</code>`).appendTo('.release-listing');
-                return;
-            }
-            $.each(releases, function (index, release) {
-                const releaseDiv = $('<div class="col-4 plugin-release cd">');
-                if (release.name) {
-                    $('<span class="name">').text(release.name).appendTo(releaseDiv);
-                } else {
-                    $('<span class="name text-muted">').text("unnamed-release").appendTo(releaseDiv);
-                }
-
-                releaseDiv.append(ui.createTag(release.tag_name));
-                releaseDiv.append(ui.keyValueGroup("Size", ui.readableSize(release.assets[0].size), "btn-primary"));
-                releaseDiv.append(ui.keyValueGroup("Downloads", release.assets[0].download_count, "btn-success"));
-
-                const publishedDate = new Date(release.published_at);
-                releaseDiv.append(ui.keyValueGroup("Published At", publishedDate.toLocaleDateString("en-US", {
-                    weekday: 'short',
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                })));
-
-                const footer = $('<div class="cd-ft">');
-                ui.downloadButton(release.assets[0].browser_download_url).appendTo(footer);
-                footer.appendTo(releaseDiv);
-
-                releaseDiv.appendTo('.release-listing');
-            });
+        const table = $('<table class="table table-bordered">');
+        const headerRow = $('<tr>');
+        $('<thead>').append(headerRow).appendTo(table);
+        $.each(["Name", "tag", "size", "Downloads", "Published At", "Author", ""], function (index, text) {
+            $('<th scope="col">').text(text).appendTo(headerRow)
         });
+
+        const tbody = $('<tbody>');
+        table.append(tbody);
+        if (releases.length == 0) {
+            ui.errorCard("No release", `No release available for plugin <code>${plugin.full_name}</code>`).appendTo('.release-listing');
+            return;
+        }
+        $.each(releases, function (index, release) {
+            const row = $('<tr>');
+            row.appendTo(tbody);
+            if (release.name) {
+                $('<td>').text(release.name).appendTo(row);
+            } else {
+                $('<td class="text-muted">').text("unnamed-release").appendTo(row);
+            }
+
+            $('<td>').html(`<span class="badge badge-success">${release.tag_name}</span>`).appendTo(row);
+            $('<td>').text(ui.readableSize(release.assets[0].size)).appendTo(row);
+            $('<td>').text(release.assets[0].download_count).appendTo(row);
+            $('<td>').text(new Date(release.published_at).toLocaleDateString("en-US", {
+                weekday: 'short',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            })).appendTo(row);
+
+            $('<td>').append(ui.authorInformation(release.author)).appendTo(row);
+            $('<td>').append(ui.downloadButton(release.assets[0].browser_download_url)).appendTo(row);
+
+            table.appendTo('.release-listing');
+        });
+    };
+
+    ui.authorInformation = function (author) {
+        const anchor = $(`<a href="${author.url}" style="text-decoration:none">`);
+        anchor.append(`<img src="${author.avatar_url}" width="20" height="20" class="rounded" alt="${author.login}"/>`);
+        anchor.append('&nbsp;&nbsp;');
+        anchor.append(author.login);
+        return anchor;
     };
 
     ui.downloadButton = function (downloadUrl) {
         return $('<a class="download-button text-info">')
             .text('Download')
             .attr('href', downloadUrl)
-    };
-
-    ui.keyValueGroup = function (key, value, valueClass) {
-        valueClass = valueClass || '';
-        const downloadCountDiv = $('<div class="key-value">');
-        $('<span class="key">').text(key).appendTo(downloadCountDiv);
-        $('<span class=value btn btn-sm">').addClass(valueClass).text(value).appendTo(downloadCountDiv);
-        return downloadCountDiv
-    };
-
-    ui.createTag = function (tagName) {
-        const group = $('<span class="btn-group tag">');
-        $('<span class="badge badge-dark tag-title">').text("tag").appendTo(group);
-        $('<span class="badge badge-success tag-name">').text(tagName).appendTo(group);
-        return group
     };
 
     ui.errorCard = function (header, message, cardClass) {
