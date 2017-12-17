@@ -60,6 +60,11 @@ body {
     font-weight:      600;
     color:            #586069 !important;
     background-color: #f3f5f8;
+    border-left:      3px solid #fff !important;
+}
+
+.plugin-listing .selected {
+    border-left: 3px solid #ff7d25;
 }
 
 .release-listing {
@@ -195,7 +200,14 @@ body {
 }
 
 table {
-    margin-bottom: 35px;
+    margin-bottom: 35px !important;
     background:    #fff;
     font-size:     13px;
+}
+
+.main-card {
+    position:   fixed;
+    width:      75%;
+    margin:     0px -16px;
+    max-height: calc(100vh - 6rem);
 }
