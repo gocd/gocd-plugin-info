@@ -36,7 +36,30 @@ body {
 }
 
 .plugin-listing li {
-    cursor: pointer;
+    cursor:      pointer;
+    position:    relative;
+    display:     block;
+    padding:     8px 10px;
+    color:       #0366d6;
+    font-size:   13px;
+    border-left: 3px solid #fff;
+}
+
+.plugin-listing li:first-child {
+    border-radius: 0 !important;
+    border-top:    none !important;
+}
+
+.plugin-listing li:hover {
+    background: #FAFAFA;
+}
+
+.plugin-listing li.category-header {
+    display:          block;
+    margin-bottom:    0;
+    font-weight:      600;
+    color:            #586069 !important;
+    background-color: #f3f5f8;
 }
 
 .release-listing {

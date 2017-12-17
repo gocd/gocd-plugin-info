@@ -6,8 +6,17 @@ layout: default
     $(document).ready(function () {
         const ignoreList = JSON.parse('{{ site.data.repos.ignore_list | jsonify }}');
         const ui = new UI(ignoreList);
-        ui.renderPluginList("gocd-contrib")
+        registeredPlugins(ui.renderRegisteredPlugins);
     });
+
+    function registeredPlugins(callback) {
+        $.ajax({
+            url: "api/registered-plugins.json",
+            success: function (result) {
+                callback(result);
+            }
+        });
+    }
 </script>
 
 <div class="row">
@@ -19,7 +28,7 @@ layout: default
     <div class="col-9 release-listing">
         <div class="jumbotron jumbotron-fluid">
             <div class="container">
-                <h1 class="display-3">GoCD plugins</h1>
+                <h1 class="display-3">GoCD plugins(WIP)</h1>
                 <p class="lead">Click on a plugin to see release information.</p>
             </div>
         </div>
