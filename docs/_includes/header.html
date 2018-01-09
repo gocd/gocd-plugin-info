@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item {% if page.url == '/' %}active{% endif %}">
-                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="{{ '/' | releative_url }}">Home</a>
             </li>
             <li class="nav-item {% if page.url == '/gocd-releases.html' %}active{% endif %}">
                 <a class="nav-link" href="{{'gocd-releases' | relative_url}}">GoCD releases</a>
