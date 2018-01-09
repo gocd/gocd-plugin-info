@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        let releasesJSON = sort(JSON.parse('{{ site.data.releases | jsonify }}'));
+        console.log(releasesJSON);
+
+        renderReleasesFor(releasesJSON, "deb", $('#debian'));
+        renderReleasesFor(releasesJSON, "rpm", $('#rpm'));
+        renderReleasesFor(releasesJSON, "osx", $('#osx'));
+        renderReleasesFor(releasesJSON, "win", $('#windows'));
+        renderReleasesFor(releasesJSON, "generic", $('#zip'));
+    });
+
+    function renderReleasesFor(releasesJSON, packageType, container) {
+        const table = $('<table class="table table-bordered">');
+        table.appendTo(container);
+        const headerRow = $('<tr>');
+        $('<thead>').append(headerRow).appendTo(table);
+        $.each(["Version", "Build Number", "Server", "Agent", "Released At"], function (index, text) {
+            $('<th scope="col">').text(text).appendTo(headerRow)
+        });
+
+        const tbody = $('<tbody>');
+        table.append(tbody);
+
+        for (let release of releasesJSON) {
+            const row = $('<tr>');
+            row.appendTo(tbody);
+            const packageInfo = release[packageType];
+            $('<td>').text(release.go_version).appendTo(row);
+            $('<td>').text(release.go_build_number).appendTo(row);
+
+            if (packageInfo && packageInfo.server) {
+                $('<td>').html(downloadUrl(release.go_full_version, packageInfo.server.file)).appendTo(row);
+            } else {
+                $('<td>').text('-').appendTo(row);
+            }
+
+            if (packageInfo && packageInfo.agent) {
+                $('<td>').html(downloadUrl(release.go_full_version, packageInfo.agent.file)).appendTo(row);
+            } else {
+                $('<td>').text('-').appendTo(row);
+            }
+
+            $('<td>').text(release.release_time).appendTo(row);
+        }
+    }
+
+    function downloadUrl(fullVersion, filename) {
+        return $(`<a href="https://download.gocd.org/binaries/${fullVersion}/${filename}">`).text(filename.split("/")[1]);
+    }
+
+
+    function sort(releasesJSON) {
+        const withVersionindex = releasesJSON.map(function (release) {
+            let parts = release.go_version.split(".");
+            release['versionIndex'] = parts[0] * 1000 + parts[1] * 10 + parts[2];
+            return release;
+        });
+
+        return withVersionindex.sort(function (a, b) {
+            return b.versionIndex - a.versionIndex;
+        });
+    }
+</script>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#windows" role="tab">Windows</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#osx" role="tab">OSX</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#debian" role="tab">Debian/APT</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#rpm" role="tab">RPM/YUM</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#zip" role="tab">Zip</a>
+    </li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+    <div class="tab-pane active" id="windows" role="tabpanel"></div>
+    <div class="tab-pane" id="osx" role="tabpanel"></div>
+    <div class="tab-pane" id="debian" role="tabpanel"></div>
+    <div class="tab-pane" id="rpm" role="tabpanel"></div>
+    <div class="tab-pane" id="zip" role="tabpanel"></div>
+</div>
