@@ -1,11 +1,8 @@
 title: GoCD plugins
 author: bdpiparva
 
-minima:
-  date_format: "%b %-d, %Y"
-
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
     extensions: [
         'no_intra_emphasis',
@@ -22,3 +19,4 @@ theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
+  - vendor
