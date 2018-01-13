@@ -17,6 +17,13 @@ permalink: /index
             }
         });
     }
+
+    function showView(ele, withId) {
+        $('[id*="-view"]').hide();
+        $(`#${withId}`).show();
+        $('.view-selector button').removeClass("selected");
+        $(ele).addClass("selected");
+    }
 </script>
 
 <div class="row">
@@ -25,13 +32,17 @@ permalink: /index
             <ul class="list-group plugin-listing"></ul>
         </div>
     </div>
-    <div class="col-9">
+    <div class="col-9" style="padding: 15px">
         <div class="card main-card">
-            <div class="card-header plugin-name">
-                GoCD plugins
+            <div class="card-header" style="display: none">
+                <span class="plugin-name"></span>
+                <div class="btn-grp view-selector">
+                    <button type="button" class="btn selected" onclick="showView(this,'tabular-view')">Table</button>
+                    <button type="button" class="btn" onclick="showView(this,'graph-view')">Graph</button>
+                </div>
             </div>
             <div class="card-block release-listing">
-                <p class="lead">Click on a plugin to see release information.</p>
+                <p class="lead">Click on a plugin to see releases information.</p>
             </div>
         </div>
     </div>

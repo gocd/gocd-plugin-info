@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+body {
+    color:       #fff;
+    font-size:   14.4px;
+    background:  #252830;
+    font-weight: 300;
+    font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+    color:         #fff !important;
+    background:    #252830;
+    border-bottom: 4px solid #434857;
+}
+
+.page-content {
+    top:        55px !important;
+    height:     90%;
+    overflow-y: auto;
+}
+
+.nav-tabs {
+    color:         #252830;
+    border:        none;
+    background:    #30343e;
+    padding-left:  10px;
+    border-bottom: 1px solid #434857
+}
+
+.nav-tabs .nav-item {
+    border-right: 1px solid #252830;
+
+}
+
+.nav-tabs .nav-item .nav-link {
+    color:           #cfd2da;
+    text-decoration: none;
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    background-color: #252830;
+    border-color:     #252830;
+}
+
+.nav-tabs .nav-item .nav-link:hover {
+    color:        #fff;
+    border-color: transparent;
+}
+
+.nav-tabs .nav-item:last-child {
+    border-right: none;
+}
+
+.sidebar {
+    order:         0;
+    height:        calc(100vh - 6rem);
+    padding:       0px;
+    z-index:       1000;
+    position:      -webkit-sticky;
+    position:      sticky;
+    border-right:  1px solid rgba(0, 0, 0, .1);
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.listview {
+    color:      #fff;
+    padding:    0px 20px;
+    position:   sticky;
+    overflow-y: auto;
+    max-height: calc(100vh - 6rem);
+}
+
+.plugin-listing li.category-header {
+    color:          #51586a !important;
+    cursor:         auto;
+    display:        block;
+    padding:        0px 15px;
+    font-size:      85%;
+    margin-top:     20px;
+    font-weight:    600;
+    margin-bottom:  5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;;
+}
+
+.plugin-listing li.list-group-item {
+    color:      #cfd2da;
+    cursor:     pointer;
+    border:     none;
+    display:    block;
+    padding:    0.5rem 1rem;
+    position:   relative;
+    font-size:  13px;
+    background: transparent;
+}
+
+.plugin-listing li.list-group-item:hover {
+    color: #fff;
+}
+
+.plugin-listing li.list-group-item:hover {
+    color: #fff;
+}
+
+.plugin-listing li.list-group-item.selected {
+    color:            #fff;
+    border-radius:    0.25rem;
+    background-color: #1997c6;
+}
+
+.release-listing {
+    max-height: calc(100vh - 5rem);
+    padding:    10px;
+    overflow-y: auto;
+}
+
+.card-header {
+    padding:       0px 10px 0px 0px;
+    background:    transparent;
+    border-bottom: none;
+}
+
+.plugin-name {
+    color:         #fff;
+    border:        none;
+    padding:       10px;
+    font-size:     22px;
+    background:    transparent;
+    font-weight:   300;
+    line-height:   1.6;
+    margin-bottom: 0.5rem;
+}
+
+.footer {
+    color:       rgba(255, 255, 255, .5);
+    height:      2.6rem;
+    padding:     5px;
+    background:  #434857;
+    line-height: 2;
+}
+
+table {
+    font-size: 13px;
+}
+
+.table-bordered td, .table-bordered th, .table thead th {
+    border-color: #434857;
+}
+
+.main-card {
+    border:     none;
+    background: transparent;
+}
+
+.lead {
+    text-align: center;
+    font-size:  20px;
+}
+
+.btn-grp {
+    float:          right;
+    width:          1%;
+    display:        table;
+    white-space:    nowrap;
+    vertical-align: middle;
+}
+
+.btn-grp .btn {
+    color:            #1997c6;
+    border:           1px solid #1997c6;
+    display:          inline-block;
+    padding:          0.5rem 0.75rem;
+    font-size:        0.9rem;
+    text-align:       center;
+    line-height:      1.25;
+    margin-left:      -1px;
+    font-weight:      normal;
+    white-space:      nowrap;
+    user-select:      none;
+    border-radius:    0.25rem;
+    vertical-align:   middle;
+    background-color: transparent;
+}
+
+.btn-grp .btn:first-child:not(:last-child) {
+    margin-left:                0;
+    border-top-right-radius:    0;
+    border-bottom-right-radius: 0;
+}
+
+.btn-grp .btn:focus {
+    box-shadow: none;
+}
+
+.btn-grp .btn:hover {
+    color:      #fff;
+    background: #1997c6;
+}
+
+.btn-grp .btn.selected {
+    color:      #fff;
+    background: #1997c6;
+}
+
+.btn-grp .btn:last-child:not(:first-child) {
+    border-top-left-radius:    0;
+    border-bottom-left-radius: 0;
+}
+
+#graph-view {
+    max-height: calc(100vh - 5rem);
+}

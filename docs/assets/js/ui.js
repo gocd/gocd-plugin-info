@@ -4,7 +4,7 @@ const UI = function () {
 
     ui.renderRegisteredPlugins = function (registeredPlugins) {
         $.each(registeredPlugins, function (index, category) {
-            var categoryLi = $('<li class="list-group-item category-header">').text(category.type);
+            var categoryLi = $('<li class="category-header">').text(category.type);
             categoryLi.appendTo(".plugin-listing");
             $.each(category.plugins, function (index, plugin) {
                 if (plugin.releases_url && !plugin.paid) {
@@ -23,14 +23,53 @@ const UI = function () {
             elem.addClass("selected");
 
             githubClient.listReleases(plugin, function (releases) {
+                $('.card-header').show();
                 ui.renderReleasesTableView(plugin, releases);
+                ui.renderGraph(plugin, releases);
+                $('.view-selector button').removeClass("selected");
+                $('.view-selector button').eq(0).addClass("selected");
             });
         });
     };
 
+    ui.renderGraph = function (plugin, releases) {
+        const canvas = $('<canvas id="graph-view" style="display: none">');
+        $('.release-listing').append(canvas);
+
+        new Chart(canvas.get(0), {
+            type: "line",
+            data: {
+                labels: releases.map((it) => it.tag_name),
+                datasets: [{
+                    label: plugin.name,
+                    data: releases.map((it) => it.assets[0].download_count),
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: ui.graphOptions()
+        });
+    };
+
+    ui.graphOptions = function () {
+        return {
+            scales: {
+                xAxes: [{
+                    display: true
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        };
+    };
+
     ui.renderReleasesTableView = function (plugin, releases) {
         $('.release-listing').html("");
-        const table = $('<table class="table table-bordered">');
+        const table = $('<table class="table table-bordered" id="tabular-view">');
         const headerRow = $('<tr>');
         $('<thead>').append(headerRow).appendTo(table);
         $.each(["Name", "tag", "size", "Downloads", "Published At", "Author", ""], function (index, text) {
