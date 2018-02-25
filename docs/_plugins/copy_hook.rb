@@ -4,22 +4,17 @@ require 'fileutils'
 require 'faraday'
 
 @client = Faraday.new(:url => "https://api.github.com/repos")
-
+@warnings = [];
+@ignore_list = %w(amis.yml events.yml paid_plugins.yml tag_page_header_info.yml webinars.yml workshops_presentations.yml)
 Jekyll::Hooks.register :site, :post_write do |site|
+  @warnings = [];
   @site = site
-  ignore_list = %w(amis.yml
-                  events.yml
-                  paid_plugins.yml
-                  tag_page_header_info.yml
-                  webinars.yml
-                  workshops_presentations.yml
-  )
-
+  File.write '_data/releases.json', open('https://download.gocd.org/releases.json').read
   file = File.read('_data/gocd-plugins-list.json')
 
   plugins_store = []
   JSON.parse(file).each do |entry|
-    if not ignore_list.include? entry['name']
+    if not @ignore_list.include? entry['name']
       category = {
           type: File.basename(entry['name'], '.*'),
           plugins: JSON.parse(download_yaml_file(entry['download_url']).to_json)
@@ -33,6 +28,13 @@ Jekyll::Hooks.register :site, :post_write do |site|
   File.open('api/registered-plugins.json', 'w') do |file|
     file.write(plugins_store.to_json)
   end
+
+  puts ""
+  puts "====================== Warnings ======================"
+  @warnings.each do |warning|
+    puts warning
+  end
+  puts "======================================================"
 end
 
 def download_yaml_file fromURL
@@ -95,16 +97,20 @@ end
 
 def get_releases(repo_url)
   directory = "api/#{repo_url}/"
-  response = @client.get do |req|
-    req.url "#{repo_url}/releases?per_page=50"
-    authorize_request(req)
-    req.headers['If-None-Match'] = get_etag(directory)
-  end
+  begin
+    response = @client.get do |req|
+      req.url "#{repo_url}/releases?per_page=50"
+      authorize_request(req)
+      req.headers['If-None-Match'] = get_etag(directory)
+    end
 
-  if response.status == 200
-    puts "Updating #{repo_url}"
-    write_releases_to_file(directory, {:releases => JSON.parse(response.body), :etag => response.headers["ETag"].gsub("W/", "")}.to_json)
-  else
-    puts "#{repo_url} --- Skipping(#{response.status})"
+    if response.status == 200
+      puts "Updating #{repo_url}"
+      write_releases_to_file(directory, {:releases => JSON.parse(response.body), :etag => response.headers["ETag"].gsub("W/", "")}.to_json)
+    else
+      puts "#{repo_url} --- Skipping(#{response.status})"
+    end
+  rescue
+    @warnings << "Error while fetching release info #{repo_url}"
   end
 end
