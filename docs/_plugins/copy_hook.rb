@@ -3,18 +3,33 @@ require 'open-uri'
 require 'fileutils'
 require 'faraday'
 
-@client = Faraday.new(:url => "https://api.github.com/repos")
-@warnings = [];
-@ignore_list = %w(amis.yml events.yml paid_plugins.yml tag_page_header_info.yml webinars.yml workshops_presentations.yml)
 Jekyll::Hooks.register :site, :post_write do |site|
-  @warnings = [];
   @site = site
-  File.write '_data/releases.json', open('https://download.gocd.org/releases.json').read
-  file = File.read('_data/gocd-plugins-list.json')
-
+  @warnings = [];
   plugins_store = []
-  JSON.parse(file).each do |entry|
-    if not @ignore_list.include? entry['name']
+  @client = Faraday.new(:url => get_data('hook_config', 'github_release_url'))
+  ignore_list = get_data('hook_config', 'ignore_files')
+  download_gocd_releases_json_file
+
+  all_categories = File.read('_data/gocd-plugins-list.json')
+  download_all_plugins_info(all_categories, ignore_list, plugins_store)
+  download_plugin_releases_info plugins_store
+
+  File.open('api/registered-plugins.json', 'w') do |file|
+    file.write(plugins_store.to_json)
+  end
+  print_warnings
+end
+
+def download_gocd_releases_json_file
+  if get_data('dev', 'download_releases_json') == true
+    File.write '_data/releases.json', open('https://download.gocd.org/releases.json').read
+  end
+end
+
+def download_all_plugins_info(all_categories, ignore_list, plugins_store)
+  JSON.parse(all_categories).each do |entry|
+    if not ignore_list.include? entry['name']
       category = {
           type: File.basename(entry['name'], '.*'),
           plugins: JSON.parse(download_yaml_file(entry['download_url']).to_json)
@@ -22,26 +37,13 @@ Jekyll::Hooks.register :site, :post_write do |site|
       plugins_store << category
     end
   end
-
-  download_release_information plugins_store
-
-  File.open('api/registered-plugins.json', 'w') do |file|
-    file.write(plugins_store.to_json)
-  end
-
-  puts ""
-  puts "====================== Warnings ======================"
-  @warnings.each do |warning|
-    puts warning
-  end
-  puts "======================================================"
 end
 
 def download_yaml_file fromURL
   YAML::load(open(fromURL))
 end
 
-def download_release_information(plugins_store)
+def download_plugin_releases_info(plugins_store)
   FileUtils.mkdir_p("api/")
   threads = []
   plugins_store.each do |category|
@@ -113,4 +115,23 @@ def get_releases(repo_url)
   rescue
     @warnings << "Error while fetching release info #{repo_url}"
   end
+end
+
+def get_data(data_file, key)
+  if !@site.data[data_file].nil? && !@site.data[data_file][key].nil?
+    @site.data[data_file][key]
+  end
+end
+
+def print_warnings
+
+  if @warnings.empty?
+    return
+  end
+
+  puts '====================== Warnings ======================'
+  @warnings.each do |warning|
+    puts warning
+  end
+  puts '======================================================'
 end
