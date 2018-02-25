@@ -4,3 +4,4 @@ docs/bin
 docs/.bundle
 docs/.sass-cache/
 r
+_data/dev.json
