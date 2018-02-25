@@ -85,7 +85,7 @@ def get_etag(directory)
   begin
     JSON.parse(File.read("#{directory}/index.json"))["etag"]
   rescue
-    nil
+    ""
   end
 end
 
