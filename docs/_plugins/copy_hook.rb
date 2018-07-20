@@ -4,6 +4,7 @@ require 'fileutils'
 require 'faraday'
 
 Jekyll::Hooks.register :site, :post_write do |site|
+  raise "Environment variable GITHUB_PERSONAL_ACCESS_TOKEN is not specified." if ENV["GITHUB_PERSONAL_ACCESS_TOKEN"].nil?
   @site = site
   @warnings = [];
   plugins_store = []
@@ -22,7 +23,8 @@ Jekyll::Hooks.register :site, :post_write do |site|
 end
 
 def download_gocd_releases_json_file
-  if get_data('dev', 'download_releases_json') == true
+  unless ENV["DOWNLOAD_RELEASE_JSON"].nil?
+    info "Downloading releases json from https://download.gocd.org/releases.json"
     File.write '_data/releases.json', open('https://download.gocd.org/releases.json').read
   end
 end
@@ -54,7 +56,7 @@ def download_plugin_releases_info(plugins_store)
         plugin['repository_name'] = repo_url
         threads << Thread.new {get_releases(repo_url)}
       else
-        puts "Unable to find valid release url for #{plugin['name']}"
+        info "Unable to find valid release url for #{plugin['name']}"
         plugins_to_delete << plugin
       end
     end
@@ -64,7 +66,7 @@ def download_plugin_releases_info(plugins_store)
     end
   end
 
-  puts "--> Total thread count #{threads.length}\n\n"
+  info "--> Total thread count #{threads.length}\n\n"
   threads.each {|thr| thr.join}
 end
 
@@ -92,9 +94,7 @@ def get_etag(directory)
 end
 
 def authorize_request(req)
-  if !@site.data['dev'].nil? && !@site.data['dev']['token'].nil?
-    req.headers['Authorization'] = "token #{@site.data['dev']['token']}"
-  end
+  req.headers['Authorization'] = "token #{ENV["GITHUB_PERSONAL_ACCESS_TOKEN"]}"
 end
 
 def get_releases(repo_url)
@@ -107,10 +107,10 @@ def get_releases(repo_url)
     end
 
     if response.status == 200
-      puts "Updating #{repo_url}"
+      info "Updating #{repo_url}"
       write_releases_to_file(directory, {:releases => JSON.parse(response.body), :etag => response.headers["ETag"].gsub("W/", "")}.to_json)
     else
-      puts "#{repo_url} --- Skipping(#{response.status})"
+      info "#{repo_url} --- Skipping(#{response.status})"
     end
   rescue
     @warnings << "Error while fetching release info #{repo_url}"
@@ -124,14 +124,25 @@ def get_data(data_file, key)
 end
 
 def print_warnings
-
   if @warnings.empty?
     return
   end
 
   puts '====================== Warnings ======================'
   @warnings.each do |warning|
-    puts warning
+    warn warning
   end
   puts '======================================================'
+end
+
+def success msg
+  puts "[32m=>[0m #{msg}\n"
+end
+
+def info msg
+  puts "[36m=>[0m #{msg}\n"
+end
+
+def warn msg
+  puts "[33m=>[0m #{msg}\n"
 end
