@@ -1,9 +1,5 @@
 [
   {
-    "name": "auth_plugins.yml",
-    "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/plugins/auth_plugins.yml"
-  },
-  {
     "name": "authorization_plugins.yml",
     "download_url": "https://raw.githubusercontent.com/gocd/www.go.cd/master/data/plugins/authorization_plugins.yml"
   },
