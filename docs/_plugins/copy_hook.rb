@@ -4,7 +4,7 @@ require 'fileutils'
 require 'faraday'
 
 Jekyll::Hooks.register :site, :post_write do |site|
-  raise "Environment variable GITHUB_PERSONAL_ACCESS_TOKEN is not specified." if ENV["GITHUB_PERSONAL_ACCESS_TOKEN"].nil?
+  # raise "Environment variable GITHUB_PERSONAL_ACCESS_TOKEN is not specified." if ENV["GITHUB_PERSONAL_ACCESS_TOKEN"].nil?
   @site = site
   @warnings = [];
   plugins_store = []
@@ -94,7 +94,7 @@ def get_etag(directory)
 end
 
 def authorize_request(req)
-  req.headers['Authorization'] = "token #{ENV["GITHUB_PERSONAL_ACCESS_TOKEN"]}"
+  # req.headers['Authorization'] = "token #{ENV["GITHUB_PERSONAL_ACCESS_TOKEN"]}"
 end
 
 def get_releases(repo_url)
