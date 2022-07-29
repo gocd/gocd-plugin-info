@@ -33,7 +33,7 @@ GEM
     faraday-rack (1.0.0)
     faraday-retry (1.0.3)
     ffi (1.15.5)
-    font-awesome-sass (6.1.1)
+    font-awesome-sass (6.1.2)
       sassc (~> 2.0)
     forwardable-extended (2.6.0)
     http_parser.rb (0.8.0)
