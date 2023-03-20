@@ -91,18 +91,26 @@ permalink: /gocd-releases
 				serverDownloadTd.append(downloadUrl(fullVersion, packageInfo.server32bit.file, "Server x32"));
 			}
 
-			const serverDisplayName = packageType === "win" ? "Server x64" : "Server";
+			const serverDisplayName = ["win", "osx"].includes(packageType) ? "Server x64" : "Server";
 			if (packageInfo.server) {
 				serverDownloadTd.append(downloadUrl(fullVersion, packageInfo.server.file, serverDisplayName));
+			}
+
+			if (packageInfo.hasOwnProperty("server-aarch64")) {
+				serverDownloadTd.append(downloadUrl(fullVersion, packageInfo['server-aarch64'].file, "Server aarch64"));
 			}
 
 			if (packageInfo.hasOwnProperty("agent32bit")) {
 				agentDownloadTd.append(downloadUrl(fullVersion, packageInfo.agent32bit.file, "Agent x32"));
 			}
 
-			const agentDisplayName = packageType === "win" ? "Agent x64" : "Agent";
+			const agentDisplayName = ["win", "osx"].includes(packageType) ? "Agent x64" : "Agent";
 			if (packageInfo.agent) {
 				agentDownloadTd.append(downloadUrl(fullVersion, packageInfo.agent.file, agentDisplayName));
+			}
+
+			if (packageInfo.hasOwnProperty("agent-aarch64")) {
+				agentDownloadTd.append(downloadUrl(fullVersion, packageInfo['agent-aarch64'].file, "Agent aarch64"));
 			}
 		}
 	}
