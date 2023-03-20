@@ -1,8 +1,8 @@
 .idea/
 docs/_site
 docs/bin
-docs/.bundle
+docs/.bundle/ruby/
 docs/.sass-cache/
 r
 docs/_data/dev.json
-.bundle/
+.bundle/ruby/

@@ -5,7 +5,7 @@
 #### 1. Install gems
 ```bash
 cd docs
-bundle install --path .bundle --binstubs
+bundle install
 ```
 
 #### 2. Build site
