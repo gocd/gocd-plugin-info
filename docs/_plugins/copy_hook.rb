@@ -101,7 +101,7 @@ def get_releases(repo_url)
   directory = "api/#{repo_url}/"
   begin
     response = @client.get do |req|
-      req.url "#{repo_url}/releases?per_page=50"
+      req.url "#{repo_url}/releases?per_page=100"
       authorize_request(req)
       req.headers['If-None-Match'] = get_etag(directory)
     end
