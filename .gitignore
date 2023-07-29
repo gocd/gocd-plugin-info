@@ -3,6 +3,5 @@ docs/_site
 docs/bin
 docs/.bundle/ruby/
 docs/.sass-cache/
-r
+docs/.envrc
 docs/_data/dev.json
-.bundle/ruby/
