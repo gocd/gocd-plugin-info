@@ -31,10 +31,10 @@ end
 
 def download_all_plugins_info(all_categories, ignore_list, plugins_store)
   JSON.parse(all_categories).each do |entry|
-    if not ignore_list.include? entry['name']
+    unless ignore_list.include? entry['name']
       category = {
-          type: File.basename(entry['name'], '.*'),
-          plugins: JSON.parse(download_yaml_file(entry['download_url']).to_json)
+        type: File.basename(entry['name'], '.*'),
+        plugins: JSON.parse(download_yaml_file(entry['download_url']).to_json)
       }
       plugins_store << category
     end
@@ -71,11 +71,11 @@ def download_plugin_releases_info(plugins_store)
 end
 
 def github_url url
-  return !url.nil? && url.match(/\Ahttps:\/\/github.com\/\S*\/\S*\/releases\/{0,1}$/)
+  !url.nil? && url.match(/\Ahttps:\/\/github.com\/\S*\/\S*\/releases\/latest$/)
 end
 
 def github_repo_url url
-  (url.match(/\Ahttps:\/\/github.com\/(\S*\/\S*)\/releases\/{0,1}$/).captures)[0]
+  (url.match(/\Ahttps:\/\/github.com\/(\S*\/\S*)\/releases\/latest$/).captures)[0]
 end
 
 def write_releases_to_file(directory, releases)
