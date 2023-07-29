@@ -24,8 +24,9 @@ const UI = function () {
 
             githubClient.listReleases(plugin, function (releases) {
                 $('.card-header').show();
-                ui.renderReleasesTableView(plugin, releases);
-                ui.renderGraph(plugin, releases);
+                var filtered = releases.filter(r => r.prerelease !== true);
+                ui.renderReleasesTableView(plugin, filtered);
+                ui.renderGraph(plugin, filtered);
                 $('.view-selector button').removeClass("selected");
                 $('.view-selector button').eq(0).addClass("selected");
             });
@@ -87,6 +88,8 @@ const UI = function () {
             row.appendTo(tbody);
             if (release.name) {
                 $('<td>').text(release.name).appendTo(row);
+            } else if (release.tag_name) {
+                $('<td>').text(release.tag_name).appendTo(row);
             } else {
                 $('<td class="text-muted">').text("unnamed-release").appendTo(row);
             }
@@ -113,11 +116,15 @@ const UI = function () {
     };
 
     ui.authorInformation = function (author) {
-        const anchor = $(`<a href="https://github.com/${author.login}" style="text-decoration:none">`);
-        anchor.append(`<img src="${author.avatar_url}" width="20" height="20" class="rounded" alt="${author.login}"/>`);
-        anchor.append('&nbsp;&nbsp;');
-        anchor.append(author.login);
-        return anchor;
+        if (author) {
+            const anchor = $(`<a href="https://github.com/${author.login}" style="text-decoration:none">`);
+            anchor.append(`<img src="${author.avatar_url}" width="20" height="20" class="rounded" alt="${author.login}"/>`);
+            anchor.append('&nbsp;&nbsp;');
+            anchor.append(author.login);
+            return anchor;
+        } else {
+            return "Unknown";
+        }
     };
 
     ui.downloadButton = function (downloadUrl) {
