@@ -4,7 +4,6 @@ GIT
   ref: refs/pull/233/head
   specs:
     sassc (2.4.0)
-      ffi (~> 1.9)
 
 GEM
   remote: https://rubygems.org/
@@ -104,9 +103,9 @@ GEM
     webrick (1.8.1)
 
 PLATFORMS
-  arm64-darwin-17
+  arm64-darwin
   ruby
-  x86_64-darwin-17
+  x86_64-darwin
 
 DEPENDENCIES
   faraday
