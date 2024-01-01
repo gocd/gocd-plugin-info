@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'font-awesome-sass'
+gem 'sassc', github: 'sass/sassc-ruby', ref: 'refs/pull/233/head'
 gem 'minima'
 gem 'nokogiri'
 gem 'kramdown'
