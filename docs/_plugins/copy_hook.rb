@@ -23,10 +23,8 @@ Jekyll::Hooks.register :site, :post_write do |site|
 end
 
 def download_gocd_releases_json_file
-  unless ENV["DOWNLOAD_RELEASE_JSON"].nil?
-    info "Downloading releases json from https://download.gocd.org/releases.json"
-    File.write '_data/releases.json', open('https://download.gocd.org/releases.json').read
-  end
+  info "Downloading releases json from https://download.gocd.org/releases.json"
+  File.write('_data/releases.json', URI.open('https://download.gocd.org/releases.json').read)
 end
 
 def download_all_plugins_info(all_categories, ignore_list, plugins_store)

@@ -10,7 +10,7 @@ bundle install
 
 #### 2. Build site
 ```bash
-bundle exec jekyll clean build --trace --incremental
+bundle exec jekyll build --trace --incremental
 ```
 
 #### 3. Serve locally
